@@ -43,7 +43,7 @@ CompilerIf #CompileWindows | #CompileLinux | #CompileMac
     
     ; Gtk2 'Pango' need an "!" before the font name (else it will use GDK font)
     ;
-    CompilerIf #CompileLinuxGtk2
+    CompilerIf #CompileLinuxGtk
       FontName$ = "!"+FontName$
     CompilerEndIf
     
@@ -3124,7 +3124,7 @@ CompilerIf #CompileWindows | #CompileLinux | #CompileMac
     
     ; Workaround for the Scintilla shortcut *eating* on Linux.
     ;
-    ProcedureCDLL ScintillaShortcutHandler(*Widget, *Event._GdkEventKey, user_data)
+    ProcedureCDLL ScintillaShortcutHandler(*Widget, *Event.GdkEventKey, user_data)
       
       If *Event\keyval = $FF09 Or *Event\keyval = $FF0D Or *Event\keyval = $FF8D ; handle the autocomplete events
         
