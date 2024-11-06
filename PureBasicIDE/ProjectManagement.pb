@@ -1037,6 +1037,7 @@ Procedure LoadProject(Filename$)
                     ProjectTargets()\EnableUser    = Xml_Boolean(GetXMLAttribute(*Entry, "user"))
                     ProjectTargets()\DPIAware      = Xml_Boolean(GetXMLAttribute(*Entry, "dpiaware"))
                     ProjectTargets()\DllProtection = Xml_Boolean(GetXMLAttribute(*Entry, "dllprotection"))
+                    ProjectTargets()\SharedUCRT    = Xml_Boolean(GetXMLAttribute(*Entry, "shareducrt"))
                     ProjectTargets()\EnableOnError = Xml_Boolean(GetXMLAttribute(*Entry, "onerror"))
                     ProjectTargets()\Debugger      = Xml_Boolean(GetXMLAttribute(*Entry, "debug"))
                     ProjectTargets()\EnableUnicode = Xml_Boolean(GetXMLAttribute(*Entry, "unicode"))
@@ -1497,6 +1498,9 @@ Procedure SaveProject(ShowErrors)
       EndIf
       If ProjectTargets()\DllProtection
         SetXMLAttribute(*Options, "dllprotection",  "1")
+      EndIf
+      If ProjectTargets()\SharedUCRT
+        SetXMLAttribute(*Options, "shareducrt",  "1")
       EndIf
       If ProjectTargets()\EnableOnError
         SetXMLAttribute(*Options, "onerror", "1")
