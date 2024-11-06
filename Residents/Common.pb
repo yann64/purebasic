@@ -1666,11 +1666,11 @@ EndEnumeration
 #PB_Material_DepthBias      = 22
 
 ; #PB_Material_EnvironmentMap values
-#PB_Material_NoMap         = -1
-#PB_Material_PlanarMap     = 0
+#PB_Material_NoMap         = 0
 #PB_Material_CurvedMap     = 1
-#PB_Material_ReflectionMap = 2
-#PB_Material_NormalMap     = 3
+#PB_Material_PlanarMap     = 2
+#PB_Material_ReflectionMap = 3
+#PB_Material_NormalMap     = 4
 
 ; #PB_Material_TAM values
 #PB_Material_WrapTAM   = 0
