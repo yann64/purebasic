@@ -50,11 +50,22 @@
 #PB_Backend_Asm = 0
 #PB_Backend_C = 1
 
+; Internal compiler constant #PB_Compiler_OS
+;
+#PB_OS_Windows        =  1
+#PB_OS_Linux          =  2
+#PB_OS_AmigaOS        =  3
+#PB_OS_MacOS          =  4
+#PB_OS_Web            =  5
+
 #PB_Structure_AlignC = -1
 
 #PB_Compiler_Executable = 0
 #PB_Compiler_DLL        = 1
 #PB_Compiler_Console    = 2
+CompilerIf #PB_Compiler_OS <> #PB_OS_Web
+  #PB_Compiler_PureLibrary = 3
+CompilerEndIf
 
 ; Internal type used by some PB functions (Sort) and also by Defined(), TypeOf()
 ;
@@ -104,14 +115,6 @@
 #PB_Vector_NegativeX = 3
 #PB_Vector_NegativeY = 4
 #PB_Vector_NegativeZ = 5
-
-; Internal compiler constant #PB_Compiler_OS
-;
-#PB_OS_Windows        =  1
-#PB_OS_Linux          =  2
-#PB_OS_AmigaOS        =  3
-#PB_OS_MacOS          =  4
-#PB_OS_Web            =  5
 
 ; OSVersion() Constants
 ;
@@ -919,10 +922,15 @@ EndEnumeration
 
 ; Network
 ;
-#PB_Network_TCP = 1; #SOCK_STREAM
-#PB_Network_UDP = 2; #SOCK_DGRAM
-#PB_Network_IPv4 = 0
-#PB_Network_IPv6 = 1 << 28
+#PB_Network_TCP      = 0
+#PB_Network_IPv4     = 0
+#PB_Network_UDP      = 1 << 0
+#PB_Network_IPv6     = 1 << 1
+#PB_Network_TLSv1_0  = 1 << 2
+#PB_Network_TLSv1_1  = 1 << 3
+#PB_Network_TLSv1_2  = 1 << 4
+#PB_Network_TLSv1_3  = 1 << 5
+#PB_Network_TLSv1    = (#PB_Network_TLSv1_2 | #PB_Network_TLSv1_3) ; Only currently supported version
 
 #PB_NetworkEvent_None       = 0
 #PB_NetworkEvent_Connect    = 1

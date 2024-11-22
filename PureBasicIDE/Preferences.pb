@@ -727,9 +727,35 @@ Procedure LoadPreferences()
       GetCompilerVersion(Compilers()\Executable$, @Compilers())
     EndIf
   Next i
+  
+  ; Ensures the C backend compiler is automatically added to the list for the PureBasic version which have one
+  ;
+  CompilerIf (#CompileWindows Or #CompileLinux) And (#CompileX86 Or #CompileX64)
+    CompilerIf #CompileWindows
+      CompilerExecutable$ = PureBasicPath$ + "Compilers\pbcompilerc.exe"
+    CompilerElse ; Linux
+      CompilerExecutable$ = PureBasicPath$ + "compilers/pbcompilerc"
+    CompilerEndIf
+    
+    Found = #False
+    ForEach Compilers()
+      If IsEqualFile(CompilerExecutable$, Compilers()\Executable$)
+        Found = #True
+        Break
+      EndIf
+    Next
+    
+    ; Not found in the additional compiler list, we can add it
+    If Not Found
+      AddElement(Compilers())
+      Compilers()\Executable$ = CompilerExecutable$
+      ; will try to get the info from the exe (and set it to validated)
+      GetCompilerVersion(Compilers()\Executable$, @Compilers())
+    EndIf
+  CompilerEndIf
+  
   SortCompilers()
-  
-  
+    
   ;- - CompilerDefaults
   PreferenceGroup("CompilerDefaults")
   LoadDialogPosition(@OptionWindowPosition)
@@ -1454,7 +1480,6 @@ Procedure SavePreferences()
       EndIf
       WritePreferenceString(Index$+"_Version", Compilers()\VersionString$)
     Next Compilers()
-    
     
     ;- - CompilerDefaults
     PreferenceComment("")
