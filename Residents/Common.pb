@@ -100,12 +100,11 @@ CompilerEndIf
 
 ; Used a lot in the 3D engine, so don't prefix them with lib name
 ;
-#PB_Absolute = 0
-#PB_Relative = 1
-
-#PB_Local  = 1 << 1
-#PB_Parent = 1 << 2
-#PB_World  = 1 << 3
+#PB_Relative = 1 << 0
+#PB_Absolute = 1 << 1
+#PB_Local    = 1 << 2
+#PB_Parent   = 1 << 3
+#PB_World    = 1 << 4
 #PB_Engine3D_Raw      = 1 << 5
 #PB_Engine3D_Adjusted = 1 << 6
 
@@ -570,6 +569,11 @@ CompilerEndIf
 #PB_Container_Raised     = 2
 #PB_Container_Single     = 4
 #PB_Container_Double     = 8
+
+; Editor Flags
+#PB_Editor_ReadOnly      = 1 << 0
+#PB_Editor_WordWrap      = 1 << 1
+#PB_Editor_TabNavigation = 1 << 2
 
 ; HyperLink flags
 ;
@@ -1491,6 +1495,7 @@ CompilerIf #PB_Compiler_OS <> #PB_OS_Web
 #PB_Entity_LinearDamping = 27
 #PB_Entity_AngularDamping = 28
 #PB_Entity_DisableContactResponse = 30
+#PB_Entity_InheritScale = 31
 
 #PB_Entity_MinBoundingBoxX  = 1 << 0
 #PB_Entity_MaxBoundingBoxX  = 1 << 1
@@ -1992,9 +1997,7 @@ EndStructure
 #PB_World_DebugEntity = 1 << 0
 #PB_World_DebugBody   = 1 << 1
 
-#PB_World_TerrainPick = -2
 #PB_World_WaterPick   = -3
-
 
 ; for DragDrop lib DragOSFormats()
 
