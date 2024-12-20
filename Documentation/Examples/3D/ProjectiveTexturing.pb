@@ -40,16 +40,15 @@ SetupMaterial(1, "grass.jpg",2)
 SetupMaterial(2, "Dirt.jpg",2)
 SetupMaterial(3, "RustySteel.jpg",2)
 
+CreateCamera(1,0,0,2,4)
+CameraFOV(1,40)
+MoveCamera(1,0,80,0)
+
 CreateCamera(0, 0, 0, 100, 100)
 MoveCamera(0,0,80,-80)
 CameraLookAt(0, 0,0,0)
 CreateLight(0,$ffffff, 10000, 000, 2000)
 AmbientColor($888888)
-
-CreateCamera(1,0,0,2,4)
-CameraFOV(1,40)
-MoveCamera(1,0,80,0)
-SwitchCamera(1,0)
 
 For i=1 To 3
   LoadTexture(0,  "ValetCoeur.jpg")
