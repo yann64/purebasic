@@ -531,7 +531,10 @@ CompilerEndIf
 
 CompilerIf #CompileLinux
   ProcedureC UpdateProcedureList_GtkScroll(ScrollPosition.i)
-    SetListViewScroll(#GADGET_ProcedureBrowser, ScrollPosition)
+    ; As this callback is called async using g_idle_add() we need to ensures the gadget isn't freed yet.
+    If IsGadget(#GADGET_ProcedureBrowser)
+      SetListViewScroll(#GADGET_ProcedureBrowser, ScrollPosition)
+    EndIf
   EndProcedure
 CompilerEndIf
 
