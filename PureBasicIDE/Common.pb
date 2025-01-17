@@ -75,6 +75,11 @@ Enumeration 0
   #COLOR_PlainBackground
   
   #COLOR_Last = #COLOR_PlainBackground
+  
+  ; Special cases beyond "Last"
+  #COLOR_ToolsPanelFrontColor = #COLOR_Last + 1
+  #COLOR_ToolsPanelBackColor
+  #COLOR_Last_IncludingToolsPanel = #COLOR_Last + 2
 EndEnumeration
 
 
@@ -2688,6 +2693,7 @@ Global FakeToolsPanelID ; for the windows vertical toolspanel (only non-XP windo
 Global AlwaysHideLog, ErrorLogVisible
 Global CustomKeywordFile$
 Global ToolsPanelUseFont, ToolsPanelUseColors
+Global PreferenceToolsPanelFrontColor, PreferenceToolsPanelBackColor
 
 ; OS specific highlighting color representation:
 ;
