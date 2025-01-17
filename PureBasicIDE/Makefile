@@ -284,6 +284,11 @@ ifeq ($(PB_QT),1)
 ifeq ($(PB_PROCESSOR),X64)
   GPP_FLAGS = -fPIC -DPB_64
 endif
+
+ifeq ($(PB_PROCESSOR),X86)
+  GPP_FLAGS = -fPIC
+endif
+
 ifeq ($(PB_PROCESSOR),ARM64)
   GPP_FLAGS = -fPIC -DPB_64
 endif
