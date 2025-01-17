@@ -40,6 +40,7 @@ ifeq ($(PB_WINDOWS),1)
 	ECHOQUOTE =
 	ICON = ico
 	THEMEFOLDER = $(HOME)/Themes
+	COLORSCHEMEFOLDER = $(HOME)/ColorSchemes
 
 else
   ifeq ($(C_BACKEND),1)
@@ -86,8 +87,11 @@ endif
 	ECHOQUOTE = "
 	ICON = png
 	THEMEFOLDER = $(HOME)/themes
+	COLORSCHEMEFOLDER = $(HOME)/colorschemes
 
 endif
+
+COLORSCHEME = $(HOME)/ColorSchemes
 
 PACKLEVEL = -q -l4
 
@@ -116,6 +120,7 @@ Build/Updates.pb
 
 DEPENDENCIES = \
 	$(COLORTABLE) \
+	$(COLORSCHEME) \
 	*.pb \
 	../PureBasicDebugger/*.pb \
 	$(DIALOGS) \
@@ -210,6 +215,10 @@ $(THEMEFOLDER)/SilkTheme.zip: data/SilkTheme/*
 
 $(COLORTABLE): data/ColorTable.xml
 	cp -f data/ColorTable.xml "$(COLORTABLE)"
+
+$(COLORSCHEME): data/DefaultColorSchemes/*
+	"mkdir" -p "$(COLORSCHEMEFOLDER)"
+	cp data/DefaultColorSchemes/* "$(COLORSCHEMEFOLDER)"
 
 # this also works on windows
 #
