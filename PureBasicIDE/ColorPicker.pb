@@ -1114,6 +1114,18 @@ Procedure ColorPicker_Name_Event(*Entry.ColorPickerData, Gadget, Type)
       EndIf
       
     Case #GADGET_Color_Canvas1
+      If Type = #PB_EventType_MouseWheel
+        *Entry\First - GetGadgetAttribute(#GADGET_Color_Canvas1, #PB_Canvas_WheelDelta)
+        If *Entry\First < 0
+          *Entry\First = 0
+        EndIf
+        If *Entry\First > *Palette\Count - GetGadgetAttribute(#GADGET_Color_Scroll, #PB_ScrollBar_PageLength)
+          *Entry\First = *Palette\Count - GetGadgetAttribute(#GADGET_Color_Scroll, #PB_ScrollBar_PageLength)
+        EndIf  
+        SetGadgetState(#GADGET_Color_Scroll, *Entry\First)
+        ColorPicker_Name_Update(*Entry)
+      EndIf
+
       If Type = #PB_EventType_LeftButtonDown
         row = (GetGadgetAttribute(#GADGET_Color_Canvas1, #PB_Canvas_MouseY) - 1) / *Entry\RowHeight
         Color = *Entry\First + row
