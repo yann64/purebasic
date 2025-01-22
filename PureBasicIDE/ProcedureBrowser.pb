@@ -1022,14 +1022,14 @@ Procedure ProcedureBrowser_CreateFunction(*Entry.ToolsPanelEntry)
     DisableGadget(#GADGET_ProcedureBrowser_RestoreColor, #True)
 
     ListIconGadget(#GADGET_ProcedureBrowser, 0, 0, 0, 0, "Procedures", 100, #PB_ListIcon_FullRowSelect)
-    CompilerSelect #PB_Compiler_OS
-      CompilerCase #PB_OS_Windows
-        SetWindowLongPtr_(GadgetID(#GADGET_ProcedureBrowser), #GWL_STYLE, GetWindowLongPtr_(GadgetID(#GADGET_ProcedureBrowser), #GWL_STYLE) | #LVS_NOCOLUMNHEADER)
-      CompilerCase #PB_OS_Linux
-        gtk_tree_view_set_headers_visible_(GadgetID(#GADGET_ProcedureBrowser), #False)
-      CompilerCase #PB_OS_MacOS
-        CocoaMessage(0, GadgetID(#GADGET_ProcedureBrowser), "setHeaderView:", #False)
-    CompilerEndSelect
+    
+    CompilerIf #CompileWindows
+      SetWindowLongPtr_(GadgetID(#GADGET_ProcedureBrowser), #GWL_STYLE, GetWindowLongPtr_(GadgetID(#GADGET_ProcedureBrowser), #GWL_STYLE) | #LVS_NOCOLUMNHEADER)
+    CompilerElseIf #CompileLinuxGtk
+      gtk_tree_view_set_headers_visible_(GadgetID(#GADGET_ProcedureBrowser), #False)
+    CompilerElseIf #CompileMacCocoa
+      CocoaMessage(0, GadgetID(#GADGET_ProcedureBrowser), "setHeaderView:", #False)
+    CompilerEndIf
     
   Else
     ListViewGadget(#GADGET_ProcedureBrowser, 0, 0, 0, 0)
