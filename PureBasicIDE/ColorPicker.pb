@@ -590,7 +590,7 @@ Procedure ColorPicker_Wheel_Update(*Entry.ColorPickerData, DrawAll)
       Center = w / 2
       Radius = w / 2 - 10
       
-      CompilerIf #CompileLinux
+      CompilerIf #CompileLinuxGtk
         *Style.GtkStyle = gtk_widget_get_style_(WindowID(#WINDOW_Main))
         linbackcolor= RGB(*Style\bg[#GTK_STATE_NORMAL]\red >> 8, *Style\bg[#GTK_STATE_NORMAL]\green >> 8, *Style\bg[#GTK_STATE_NORMAL]\blue >> 8)
       CompilerEndIf
@@ -674,7 +674,7 @@ Procedure ColorPicker_Wheel_Setup(*Entry.ColorPickerData, CanvasX, CanvasY, Canv
   If StartDrawing(ImageOutput(#IMAGE_Color_Content1))
     w = OutputWidth()
     h = OutputHeight()
-    CompilerIf #CompileLinux
+    CompilerIf #CompileLinuxGtk
       *Style.GtkStyle = gtk_widget_get_style_(WindowID(#WINDOW_Main))
       linbackcolor= RGB(*Style\bg[#GTK_STATE_NORMAL]\red >> 8, *Style\bg[#GTK_STATE_NORMAL]\green >> 8, *Style\bg[#GTK_STATE_NORMAL]\blue >> 8)
       Box(0, 0, w, h, linbackcolor)
@@ -792,7 +792,7 @@ Procedure ColorPicker_Palette_Update(*Entry.ColorPickerData)
     h = OutputHeight()
     
     ; if a palette has less items than can be displayed, it is important to remove old content
-    CompilerIf #CompileLinux
+    CompilerIf #CompileLinuxGtk
       *Style.GtkStyle = gtk_widget_get_style_(WindowID(#WINDOW_Main))
       linbackcolor= RGB(*Style\bg[#GTK_STATE_NORMAL]\red >> 8, *Style\bg[#GTK_STATE_NORMAL]\green >> 8, *Style\bg[#GTK_STATE_NORMAL]\blue >> 8)
       Box(0, 0, w, h, linbackcolor)
@@ -969,7 +969,7 @@ Procedure ColorPicker_Name_Update(*Entry.ColorPickerData)
     
     w = OutputWidth()
     h = OutputHeight()
-    CompilerIf #CompileLinux
+    CompilerIf #CompileLinuxGtk
       *Style.GtkStyle = gtk_widget_get_style_(WindowID(#WINDOW_Main))
       linbackcolor= RGB(*Style\bg[#GTK_STATE_NORMAL]\red >> 8, *Style\bg[#GTK_STATE_NORMAL]\green >> 8, *Style\bg[#GTK_STATE_NORMAL]\blue >> 8)
       linbackcolordark= RGB(*Style\dark[#GTK_STATE_NORMAL]\red >> 8, *Style\dark[#GTK_STATE_NORMAL]\green >> 8, *Style\dark[#GTK_STATE_NORMAL]\blue >> 8)
@@ -1236,7 +1236,7 @@ Procedure ColorPicker_UpdateHistory(*Entry.ColorPickerData)
   If StartDrawing(CanvasOutput(#GADGET_Color_History))
     w = OutputWidth()
     h = OutputHeight()
-    CompilerIf #CompileLinux
+    CompilerIf #CompileLinuxGtk
       *Style.GtkStyle = gtk_widget_get_style_(WindowID(#WINDOW_Main))
       linbackcolor= RGB(*Style\bg[#GTK_STATE_NORMAL]\red >> 8, *Style\bg[#GTK_STATE_NORMAL]\green >> 8, *Style\bg[#GTK_STATE_NORMAL]\blue >> 8)
       Box(0, 0, w, h, linbackcolor)
