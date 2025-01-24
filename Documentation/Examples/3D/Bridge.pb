@@ -28,8 +28,6 @@ Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Scripts", #PB_3DArchive_FileS
 Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Packs/desert.zip", #PB_3DArchive_Zip)
 Parse3DScripts()
 
-WorldShadows(#PB_Shadow_Additive)
-
 ;Materials
 ;
 CreateMaterial(0, LoadTexture(0, "Wood.jpg"))
@@ -37,18 +35,12 @@ GetScriptMaterial(1, "SphereMap/SphereMappedRustySteel")
 CreateMaterial(2, LoadTexture(2, "Dirt.jpg"))
 GetScriptMaterial(3, "Scene/GroundBlend")
 
-; Ground
-;
-CreatePlane(3, 500, 500, 5, 5, 5, 5)
-CreateEntity(3,MeshID(3),MaterialID(3), 0, -50, 0)
-CreateEntityBody(3, #PB_Entity_BoxBody, 0, 1, 1)
-
 ; Bridge
 CreateCube(1, 1.0)
 For i = 1 To #NbPlanks
   Plank(i)=CreateEntity(#PB_Any, MeshID(1), MaterialID(0))
   ScaleEntity(Plank(i), 2.8, 0.8, 20)
-  MoveEntity(Plank(i), i * 3, 0, 0, #PB_Absolute)
+  MoveEntity(Plank(i), i * 3, 16, 0, #PB_Absolute)
   CreateEntityBody(Plank(i), #PB_Entity_BoxBody, 1.0)
 Next i
 
@@ -89,9 +81,22 @@ CreateCamera(0, 0, 0, 100, 100)
 MoveCamera(0, -20, 30, -40, #PB_Absolute)
 CameraLookAt(0, EntityX(C) + 25, EntityY(C) + 10,  EntityZ(C))
 
-; Skybox
-;
-SkyBox("desert07.jpg")
+; Sky
+SkyTexture = LoadTexture(#PB_Any, "sky.png")
+SkyDome(TextureID(SkyTexture), $cc6600, $0088ff, 3, 400, -0.5, 0)
+
+
+; Ocean
+#EndDistance=1024*4
+WaterTexture = LoadTexture(#PB_Any,"waternormal.png")
+FoamTexture = LoadTexture(#PB_Any,"foam.png")
+CreateWater(TextureID(WaterTexture), TextureID(FoamTexture), $cc888800, $886666, #EndDistance, 1.5,1.5,0.0,0.7)
+
+;ground
+TextureGround = LoadTexture(#PB_Any,"Dirt.jpg")
+CreateMaterial(2, TextureID(TextureGround))
+CreatePlane(2, #EndDistance, #EndDistance, 16, 16, #EndDistance/64, #EndDistance/64)
+CreateEntity(2, MeshID(2), MaterialID(2), 0, -30, 0)
 
 ; Light
 ;

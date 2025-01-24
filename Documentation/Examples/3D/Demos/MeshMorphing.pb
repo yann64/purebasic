@@ -66,8 +66,8 @@ Procedure mesh_morph(r.f)
     Next
   Next
   CreateDataMesh(0,t(),8+2)
-  CreateEntity(0,MeshID(0),MaterialID(0),0,0,0)
-  CreateEntity(1,MeshID(0),MaterialID(1),0,0,0)
+  CreateEntity(0,MeshID(0),MaterialID(0))
+  CreateEntity(1,MeshID(0),MaterialID(1))
 EndProcedure
 
 

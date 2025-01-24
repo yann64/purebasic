@@ -34,6 +34,7 @@ Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Main",#PB_3DArchive_FileSyste
 Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Terrain",#PB_3DArchive_FileSystem)
 Parse3DScripts()
 
+
 ;- Light
 ;
 light = CreateLight(#PB_Any ,RGB(190, 190, 190), 4000, 1200, 1000,#PB_Light_Directional)

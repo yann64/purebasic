@@ -106,8 +106,7 @@ Repeat
     KeyX = (KeyboardPushed(#PB_Key_Right)-KeyboardPushed(#PB_Key_Left))*#CameraSpeed
     Keyy = (KeyboardPushed(#PB_Key_Down)-KeyboardPushed(#PB_Key_Up))*#CameraSpeed    
   EndIf
-  
-  RotateEntity(Entity, 0.1, 0.1, 0.1, #PB_Relative)
+  RotateEntity(Entity, 0.1, 0.1, 0.1, #PB_Relative|#PB_World)
   
   StartDrawing(TextureOutput(0))
   DrawImage(ImageID(0), 0, 0)
@@ -131,7 +130,7 @@ Procedure DrawOnWhiteBoard()
     
     x = (1 - GetX()) * 160
     y = (1 - GetZ()) * 120
-    
+
     If x>0 And x<320 And y>0 And y<240
       If mem = 0
         Memx = x

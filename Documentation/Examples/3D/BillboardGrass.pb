@@ -79,7 +79,7 @@ Repeat
   MouseY = -MouseDeltaY() * 0.05
   
   KeyX = (KeyboardPushed(#PB_Key_Right)-KeyboardPushed(#PB_Key_Left))*#CameraSpeed
-  Keyy = (KeyboardPushed(#PB_Key_Down)-KeyboardPushed(#PB_Key_Up)-MouseWheel()*10)*#CameraSpeed
+  Keyy = (KeyboardPushed(#PB_Key_Down)-KeyboardPushed(#PB_Key_Up)-MouseWheel()*20)*#CameraSpeed
   
   RotateCamera(Camera, MouseY, MouseX, 0, #PB_Relative)
   MoveCamera  (Camera, KeyX, 0, KeyY)

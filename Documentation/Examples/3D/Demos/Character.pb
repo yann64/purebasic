@@ -657,7 +657,7 @@ Procedure updateCamera(deltaTime.f)
   With Sinbad
     ; place the camera pivot roughly at the character's shoulder
     MoveNode(\CameraPivot, NodeX(\BodyNode), NodeY(\BodyNode) + #CAM_HEIGHT, NodeZ(\BodyNode), #PB_Absolute)
-    ; move the camera smoothly To the goal
+    ;; move the camera smoothly To the goal
     GetNodePosition(mCameraGoalPos, \CameraGoal)
     GetNodePosition(mCameraNodePos, \CameraNode)
     SubVector3(goalOffset, mCameraGoalPos, mCameraNodePos)

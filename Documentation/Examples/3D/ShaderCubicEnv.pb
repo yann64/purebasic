@@ -16,7 +16,6 @@ OpenWindowedScreen(WindowID(0), 0, 0, dx, dy, 0, 0, 0)
 Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Textures", #PB_3DArchive_FileSystem)
 Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Textures/nvidia", #PB_3DArchive_FileSystem)
 Add3DArchive(#PB_Compiler_Home + "examples/3d/Data/Packs/desert.zip", #PB_3DArchive_Zip)
-Add3DArchive(GetCurrentDirectory(), #PB_3DArchive_FileSystem )
 Parse3DScripts()
 
 SkyBox("desert07.jpg")

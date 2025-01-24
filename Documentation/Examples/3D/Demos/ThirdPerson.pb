@@ -296,7 +296,7 @@ Procedure HandleEntity(*Entity.s_Entity)
     RotateEntity(\EntityBody, 0, Rot\y, 0, #PB_Relative)
     
     MoveNode(\MainNode, EntityX(\EntityBody), EntityY(\EntityBody)-\BodyOffsetY, EntityZ(\EntityBody), #PB_Absolute|#PB_World)
-    RotateNode(\MainNode, 0, EntityYaw(\EntityBody), #PB_Absolute|#PB_World)
+    RotateNode(\MainNode, 0, EntityYaw(\EntityBody), #PB_Absolute)
   EndWith
 EndProcedure
 
