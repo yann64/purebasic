@@ -2221,7 +2221,7 @@ La valeur JSON.
   @@CreateJSON, @@CatchJSON, @@LoadJSON, 
   @@JSONValue, @@FreeJSON,
   @@JSONErrorMessage, @@JSONErrorLine, 
-  @@JSONErrorPosition, @@ExportJSON
+  @@JSONErrorPosition, @@ExportJSON, @@ComposeJSON
   
 @SupportedOS
 

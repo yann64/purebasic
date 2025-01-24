@@ -1476,12 +1476,10 @@
 @Parameter "Noeud"
   Le noeud à utiliser.
   
-ReturnValue
+@ReturnValue
   Le nom 'tagname' du noeud.@LineBreak
-  Si le noeud n'est pas du 
-  @Link "XMLNodeType" "type" 
-  @#PB_XML_Normal ou @#PB_XML_Instruction 
-  alors une chaîne vide sera renvoyée.
+  Si le noeud n'est pas du @Link "XMLNodeType" "type" @#PB_XML_Normal 
+  ou @#PB_XML_Instruction alors une chaîne vide sera renvoyée.
 
 @SeeAlso
   @@SetXMLNodeName

@@ -19,14 +19,20 @@ Nom du serveur : irc.freenode.net
   @InternetLink "http://www.purebasic.com" "Site officiel de PureBasic"       : Développeur & Editeur International [anglais]
   @InternetLink "http://www.purearea.net" "PureArea.net"                     : Archive de codes, Freeware & Shareware en PureBasic & plus [anglais & allemand] 
   @InternetLink "http://www.purebasic.fr/english/viewtopic.php?t=37059"  "PureBasic - A Beginner's Guide"   : Un livre en anglais pour débuter avec PureBasic
-  @InternetLink "http://www.xs4all.nl/~bluez/purebasic/"  "PureBasic Survival Guide"         : Tutoriel  PureBasic en anglais
+  @InternetLink "https://github.com/fantaisie-software/purebasic" "L'IDE de PureBasic"               : En source ouverte, vous pouvez participer à son évolution
+  @InternetLink "https://www.ninelizards.com/purebasic/"  "PureBasic Survival Guide"         : Tutoriel  PureBasic en anglais
   @InternetLink "http://blog.purebasic.com"  "PureBasic Blog"                   : Ce blog contient des informations importantes sur PureBasic) [anglais]
   @InternetLink "http://pureproject.reelmedia.org/" "The Pure Project Network"         : Bibliothèques utilisateurs, Exemples de codes & plus [anglais]
   @InternetLink "http://purevision.reelmedia.org/" "PureVision"  : Editeur visuel d'interfaces [anglais]
-  @InternetLink "http://www.hellobasic.com/download.aspx" "PBDev"       : Environnement de programmation [anglais]
   @InternetLink "https://learn.microsoft.com/en-us/windows/win32/apiindex/windows-api-list"  "Support de l'API Microsoft Windows"  : Interface de Programmation d'Applications [anglais]
-  @InternetLink "http://www.tailbite.com/" "TailBite"                            : Outil non officiel pour créer des bibliothèques utilisateurs
-  @InternetLink "http://gnozal.ucoz.com/" "Gnozal's Purebasic place"            : Bibliothèques utilisateurs, jaPBe, Outils & plus encore 
+  @InternetLink "https://www.purebasic.fr/english/viewforum.php?f=26" "TailBite"                         : Outils pour créer des bibliothèques utilisateurs                           : Outil non officiel pour créer des bibliothèques utilisateurs
+  @InternetLink "https://www.rsbasic.de/" "RSBasic"                          : Plein de codes pour Windows, OSX et Linux
+  @InternetLink "https://rosettacode.org/wiki/Category:PureBasic" "Code Rosetta" 
+  @InternetLink "https://purebasic.developpez.com/" "Developpez.com"                   : En Français 
+  @InternetLink "https://github.com/kenmo-pb/includes/" "kenmo's"                          : Beaucoup d'exemples de codes.
+  @InternetLink "https://github.com/SicroAtGit/PB-CodeArchiv-Rebirth" "sicro's"                          : Une bonne collection de codes 
+  @InternetLink "https://www.mypurebasicstuff.com/" "JHPJHP's"                         : Beaucoup de codes intéressant
+  @InternetLink "https://www.unionbytes.de/" "Stargate's"                       : LE fameux, avec d'excellents codes...
 @EndFixedFont
 
 @Section Revendeurs PureBasic 

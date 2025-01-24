@@ -1193,21 +1193,3 @@ Peut être une des valeurs suivantes:
 @SupportedOS
 
 ;--------------------------------------------------------------------------------------------------------
-
-@Function SwitchCamera(#Camera, #NouvelleCamera)
-
-@Description
-  Echange une caméra avec une autre.
-
-@Parameter "#Camera"
-  La caméra à échanger.
-
-@Parameter "#NouvelleCamera"
-  La nouvelle caméra à afficher.
-
-@NoReturnValue
-
-@SeeAlso
-  @@CreateCamera
-  
-@SupportedOS

@@ -424,11 +424,8 @@
 @NoReturnValue
 
 @Remarks
-  Lorsque vous utilisez le mode
-  @#PB_Relative, alors la taille 
-  du noeud sera multiplié par la 
-  valeur donnée pour obtenir la 
-  nouvelle taille.
+  Les entités attachées ne sont pas mises à l'échelle automatiquement avec le noeud, 
+  sauf si l'attribut @#PB_Entity_InheritScale a été défini.
 
 @SupportedOS
 

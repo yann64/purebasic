@@ -18,7 +18,7 @@
   @LineBreak
   @LineBreak
   PureBasic ist eine portable Sprache, welche zur Zeit auf Linux, MacOS X und Windows 
-  Computersystemen arbeitet. Dies bedeutet, dass derselbe Programmcode für jedes System nativ kompiliert werden 
+  Computersystemen und Maschinen mit Raspberry PI OS arbeitet. Dies bedeutet, dass derselbe Programmcode für jedes System nativ kompiliert werden 
   kann und trotzdem die volle Power des jeweiligen Systems ausnutzt. Es gibt keine Flaschenhälse wie einen virtuellen Prozessor 
   oder einen Code-Übersetzer; der generierte Code produziert ein optimiertes Executable.
  @LineBreak
@@ -26,8 +26,8 @@
 
 @Section Die bedeutendsten Features von PureBasic
 
-  - x86 und x64 Support @LineBreak
-  - 83 native Befehlsbibliotheken @LineBreak
+  - Intel/AMD und andere x86 und x64, M1, M2, M3, arm32 und arm64 Support @LineBreak
+  - 86 native Befehlsbibliotheken @LineBreak
   - Hunderte von Funktionen @LineBreak 
   - Eingebaute @ReferenceLink "dim" "Arrays", dynamisch verknüpfte @ReferenceLink "newlist" "Listen", komplexe
     @ReferenceLink "structures" "Strukturen", @ReferenceLink "memory" "Zeiger" und @ReferenceLink "variables" "Variablen"-Definitionen @LineBreak
@@ -61,10 +61,11 @@
   - Erstellung von Fenstern mit automatischer Anpassung von Gadgets (Layout) mit Hilfe der 'Dialog'-Bibliothek @LineBreak
   - 33 native Gadgets @LineBreak
   - 1 spezielles OpenGL-Gadget @LineBreak
-  - 1 Szintilla-Gadget @LineBreak
+  - 1 Scintilla-Gadget @LineBreak
+  - 1 Webview-Gadget zum einfachen Erstellen von HTML/CSS-basierten Benutzeroberflächen @LineBreak
   - Process, Thread, Mutex, Semaphore @LineBreak
   - Drag'n Drop @LineBreak
-  - DPI für MS Windows @LineBreak
+  - DPI für MS Windows und OSX @LineBreak
   - QT und GTK3 für Linux @LineBreak
   - DirectX- und OpenGL-Systeme @LineBreak
   - Import von statischen (lib) oder dynamischen Bibliotheken (dll, so, usw.) @LineBreak
@@ -131,6 +132,7 @@
     Systray
     Thread
     Toolbar
+    WebView
     Window
     Xml
 
@@ -165,6 +167,7 @@
     Node
     Nodeanimation
     Particle
+    Skeleton
     Sound3d
     Specialeffect
     Spline

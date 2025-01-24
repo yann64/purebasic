@@ -13,14 +13,14 @@
   API objects. @LineBreak
   @LineBreak
   PureBasic is a portable programming language which currently works on Linux, Mac OS X and 
-  Windows computer systems. This means that the same code can be compiled natively for the OS and 
+  Windows computer systems and machines running Raspberry PI OS. This means that the same code can be compiled natively for the OS and 
   use the full power of each. There are no bottlenecks like a virtual machine or a code translator, 
   the generated code produces an optimized executable. @LineBreak@LineBreak
   
 @Section The main features of PureBasic
 
-    - x86 and x64 support @LineBreak
-    - 83 native libraries @LineBreak
+    - Intel/AMD and others' x86 and x64, M1, M2, M3, arm32 and arm64 support @LineBreak
+    - 86 native libraries @LineBreak
     - Hundreds of functions @LineBreak 
     - Built-in arrays, dynamic lists, complex structures, maps, pointers and variable definitions @LineBreak
     - Supported types: Byte (8-bit), Word (16-bit), Long (32-bit), Quad (64-bit), Float (32-bit), Double (64-bit) and Characters @LineBreak
@@ -53,9 +53,10 @@
     - 33 native gadgets @LineBreak
     - 1 gadget specialized in OpenGL @LineBreak
     - 1 scintilla gadget @LineBreak
+    - 1 webview gadget to easily create HTML/CSS based user interface @LineBreak
     - Process, thread, mutex, semaphore @LineBreak
     - Drag'n drop @LineBreak
-    - DPI for MS Windows @LineBreak
+    - DPI for MS Windows and OSX @LineBreak
     - QT and GTK3 for Linux @LineBreak
     - DirectX and OpenGL systems @LineBreak
     - Import of static (lib) or dynamic libraries (dll, so, etc.) @LineBreak
@@ -122,6 +123,7 @@
     systray
     thread
     toolbar
+    webview
     window
     xml
 
@@ -156,6 +158,7 @@
     node
     nodeanimation
     particle
+    skeleton
     sound3d
     specialeffect
     spline

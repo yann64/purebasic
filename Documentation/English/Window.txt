@@ -1340,7 +1340,8 @@
   ;Window
   OpenWindow(0, 0, 0, 800, 600, "WindowEvent", #PB_Window_SystemMenu|#PB_Window_ScreenCentered)
   OpenWindowedScreen(WindowID(0), 0, 0, 800, 600)
-
+  SetFrameRate(30)
+  
   ;Ground
   Ground = CreateSprite(#PB_Any, 800, 30)
   StartDrawing(SpriteOutput(Ground))
@@ -1369,9 +1370,8 @@
     ;Try all possibilities but only one at a time
     Event = WindowEvent()    ; Animation
     ;Event = WaitWindowEvent()  ; Blocking animation
-    ;Event = WaitWindowEvent(1) ; Animation but a 1ms unnecessary delay and furthermore it's a 
-                                ; bad way to program events because the queue is not empty
-
+    ;Event = WaitWindowEvent(100) ; Animation but every time an event occurs like moving the mouse for example, 
+                                  ; the animation will be suspended for 100 ms
     Select Event   
       Case #PB_Event_CloseWindow
       End

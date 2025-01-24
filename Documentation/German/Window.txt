@@ -1428,6 +1428,7 @@
   ;Fenster
   OpenWindow(0, 0, 0, 800, 600, "WindowEvent", #PB_Window_SystemMenu|#PB_Window_ScreenCentered)
   OpenWindowedScreen(WindowID(0), 0, 0, 800, 600)
+  SetFrameRate(30)
 
   ;Hintergrund
   Ground = CreateSprite(#PB_Any, 800, 30)
@@ -1457,17 +1458,17 @@
     ;Versuche alle Möglichkeiten, aber nur eine zu einem Zeitpunkt
     Event = WindowEvent()    ; Animation
     ;Event = WaitWindowEvent()  ; Animation wird blockiert
-    ;Event = WaitWindowEvent(1) ; Animation, aber einer 1ms langen unnötigen Verzögerung; und darüber hinaus ist es ein
-                                ; schlechter Weg, um Ereignisse zu programmieren, weil die Warteschlange nicht leer ist
+    ;Event = WaitWindowEvent(100) ; Animation - aber jedes Mal, wenn ein Ereignis wie z.B. eine Mausbewegung eintritt,
+                                  ; wird die Animation für 100 ms angehalten
 
     Select Event   
       Case #PB_Event_CloseWindow
-      End
+        End
     EndSelect 
     Until Event=0
     
-    FlipBuffers() ; ==> Mit WindowEvent(), FlipBuffers() gibt die CPU für das Multitasking frei, so dass Delay(1)
-                  ;     nicht erforderlich ist.
+    FlipBuffers() ; ==> Mit WindowEvent(): FlipBuffers() gibt die CPU für das Multitasking frei,
+                  ;     sodass Delay(1) nicht erforderlich ist.
     ClearScreen(RGB(135, 206, 235))
     
     ExamineKeyboard() ;Keyboard

@@ -224,7 +224,6 @@ consultable @ReferenceLink "license_engine3d" "ici"
   - Camera         : Utiliser @@CameraID pour obtenir un ID valide.
   - Entité         : Utiliser @@EntityID pour obtenir un ID valide.
   - Lumière        : Utiliser @@LightID pour obtenir un ID valide.
-  - Mesh           : Utiliser @@MeshID pour obtenir un ID valide.
   - Noeud          : Utiliser @@NodeID pour obtenir un ID valide.
   - Texte3D        : Utiliser @@Text3DID pour obtenir un ID valide.  
   - Emetteur de Particle : Utiliser @@ParticleEmitterID pour obtenir un ID valide.
@@ -261,7 +260,6 @@ consultable @ReferenceLink "license_engine3d" "ici"
   - Camera         : Utiliser @@CameraID pour obtenir un ID valide.
   - Entité         : Utiliser @@EntityID pour obtenir un ID valide.
   - Lumière        : Utiliser @@LightID pour obtenir un ID valide.
-  - Mesh           : Utiliser @@MeshID pour obtenir un ID valide.
   - Noeud          : Utiliser @@NodeID pour obtenir un ID valide.
   - Texte3D        : Utiliser @@Text3DID pour obtenir un ID valide.  
   - Emetteur de Particle : Utiliser @@ParticleEmitterID pour obtenir un ID valide.
@@ -959,8 +957,6 @@ consultable @ReferenceLink "license_engine3d" "ici"
   @ConstantColor "-1"       : Aucun objet détecté.
   @ConstantColor "0 et plus": Le clic s'est fait sur une entité. La sélection de l'entité est basée sur sa boîte englobante et non sur son mesh.
   @#PB_World_WaterPick  : Le clic s'est fait sur l'eau.
-  @#PB_World_TerrainPick: Le clic s'est fait sur un terrain.
-
 @EndFixedFont
 @LineBreak 
  Pour obtenir les coordonnées 3D de l'objet 
@@ -1356,9 +1352,8 @@ consultable @ReferenceLink "license_engine3d" "ici"
   @ConstantColor "0 et au-dessus"  : Le rayon traverse une entité. 
                     La détection d'entité est basée sur sa boîte englobante et pas sur son mesh.
   @#PB_World_WaterPick  : Le rayon traverse l'eau.
-  @#PB_World_TerrainPick: Le rayon traverse un terrain.
-  
 @EndFixedFont
+
  Pour obtenir plus d'informations sur la 
  position de l'objet sélectionné, 
  voir @@PickX, @@PickY and @@PickZ.

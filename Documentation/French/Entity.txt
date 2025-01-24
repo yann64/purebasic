@@ -824,14 +824,14 @@ Si ce masque correspond au masque spécifié par
   @@SetEntityAttribute 
   
 @OptionalParameter "Axe"
-  Les axes du corps :
+  L'axe du corps.
+@LineBreak
+@LineBreak 
+  Ne s'applique que sur les types de corps suivants:
 @FixedFont
-  @#PB_Vector_X
-  @#PB_Vector_Y
-  @#PB_Vector_Z
-  @#PB_Vector_NegativeX
-  @#PB_Vector_NegativeY
-  @#PB_Vector_NegativeZ
+  @#PB_Entity_PlaneBody
+  @#PB_Entity_CylinderBody
+  @#PB_Entity_CapsuleBody 
 @EndFixedFont 
 
 @OptionalParameter "TailleX, TailleY, TailleZ"
@@ -1722,6 +1722,7 @@ Si ce masque correspond au masque spécifié par
   @#PB_Entity_ScaleX            : Renvoie la valeur courante de l'échelle sur l'axe 'x'.
   @#PB_Entity_ScaleY            : Renvoie la valeur courante de l'échelle sur l'axe 'y'.
   @#PB_Entity_ScaleZ            : Renvoie la valeur courante de l'échelle sur l'axe 'z'.
+  @#PB_Entity_InheritScale      : Renvoie si l'entité a hérité de l'échelle.
 @EndFixedFont
 
 @ReturnValue
@@ -1762,7 +1763,8 @@ Si ce masque correspond au masque spécifié par
   @#PB_Entity_AngularSleeping : Change la valeur de vitesse angulaire minimum en dessous de laquelle l'entité sera endormie.
   @#PB_Entity_DeactivationTime: Temps d'attente (en millisecondes) avant de mettre l'entité en mode veille lorsque les conditions ci-dessus sont remplies.
   @#PB_Entity_DisableContactResponse: Désactive ou active les contacts physiques pour cette entité. La valeur peut être @#True ou @#False.
-@EndFixedFont
+  @#PB_Entity_InheritScale    : Désactiver ou activer si l'entité possède une échelle héritée. La valeur peut être @#True ou @#False
+  @EndFixedFont
 
 @Parameter "Valeur.f"
   Valeur de l'attribut.

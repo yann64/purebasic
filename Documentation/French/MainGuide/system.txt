@@ -1,7 +1,7 @@
 @Title Configuration système requise
 
   PureBasic fonctionne sur Windows Vista, Windows 7, Windows 8, Windows 10 et 11 en version 32 bits et 
-  64 bits, Linux (noyau 2.2 et ultérieur) et MacOS X (10.11 et ultérieur) et Raspberry PI OS 
+  64 bits, Linux (noyau 2.2 et ultérieur) et MacOS X (10.15 et ultérieur) et Raspberry PI OS 
   (bookworm/debian 12 ou supérieur). @LineBreak
   @LineBreak
   Si vous rencontrez un problème sur l'une des configurations ci-dessus, n'hésitez pas à

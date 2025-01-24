@@ -2134,7 +2134,8 @@ EndIf
   ;Création de la fenêtre
   OpenWindow(0, 0, 0, 800, 600, "WindowEvent", #PB_Window_SystemMenu|#PB_Window_ScreenCentered)
   OpenWindowedScreen(WindowID(0), 0, 0, 800, 600)
-
+  SetFrameRate(30)
+  
   ;Création du sol
   Sol = CreateSprite(#PB_Any, 800, 30)
   StartDrawing(SpriteOutput(Sol))
@@ -2163,8 +2164,8 @@ EndIf
     ;Essayez les 3 possibilités mais une seule à la fois 
     Evenement = WindowEvent()    ; Animation
     ;Evenement = WaitWindowEvent()  ; Blocage de l'animation
-    ;Evenement = WaitWindowEvent(1) ; Animation mais délai d'1 ms inutile et de plus c'est une mauvaise 
-                                    ; façon de programmer car la pile des évènements n'est pas vidée
+    ;Evenement = WaitWindowEvent(100) ; Animation mais à chaque fois qu'un évènement apparait comme
+                                      ; bouger la souris par exemple, l'animation sera suspendu 100 ms
 
     Select Evenement   
       Case #PB_Event_CloseWindow

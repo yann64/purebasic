@@ -3052,7 +3052,7 @@
 
 @OptionalParameter "Width.d, Height.d"
   Specifies an optional with and height for the image. The values are interpreted
-  in terms of the @#PB_Corrdinate_Source coordinate system. If no width and height
+  in terms of the @#PB_Coordinate_Source coordinate system. If no width and height
   are specified, then the dimensions of the source image (in pixels) are converted
   into the unit of the vector drawing output and used (i.e. the image has its original
   size).

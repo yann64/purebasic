@@ -1,7 +1,7 @@
 @Title Systemvoraussetzungen
 
   PureBasic läuft auf Windows Vista, Windows 7, Windows 8, Windows 10 und Windows 11 (sowohl in der 32-Bit- als auch in der 64-Bit-Version),
-  Linux (Kernel 2.2 oder höher), MacOS X (10.11 oder höher) und Raspberry PI OS (Bookworm/Debian 12 oder höher). @LineBreak
+  Linux (Kernel 2.2 oder höher), MacOS X (10.15 oder höher) und Raspberry PI OS (Bookworm/Debian 12 oder höher). @LineBreak
   @LineBreak
   Falls irgendweIche Probleme auftreten, informieren Sie uns bitte: support@purebasic.com
 

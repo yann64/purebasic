@@ -1575,7 +1575,7 @@
 @SeeAlso
   @@CreateJSON, @@CatchJSON, @@LoadJSON, @@JSONValue, @@FreeJSON,
   @@JSONErrorMessage, @@JSONErrorLine, @@JSONErrorPosition,
-  @@ExportJSON
+  @@ExportJSON, @@ComposeJSON
   
 @SupportedOS
 

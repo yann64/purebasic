@@ -11,27 +11,30 @@
   qui est le type entier INTEGER. Pour rappel le type INTEGER vaut:@LineBreak 
   4 octets (avec un compilateur 32 bits) allant de -2147483648 à +2147483647@LineBreak 
   8 octets (avec un compilateur 64 bits) allant de -9223372036854775808 à +9223372036854775807
-
-@Example
+  @LineBreak 
+  @LineBreak 
+  @Keyword Define est d'une grande souplesse car il permet aussi d'assigner un type différent
+  à une variable en particulier, à l'intérieur d'une série. 
+  @LineBreak 
+  @LineBreak 
+ @Keyword Define peut également être utilisé avec les @ReferenceLink "dim" "tableaux", 
+  les @ReferenceLink "newlist" "listes" et les @ReferenceLink "newmap" "maps".   
+  
+@Example Affectation en série
 @Code
    Define.b a, b = 10, c = b*2, d ; Ces 4 variables sont de type octets (byte .b)
 @EndCode
 
-  @Keyword Define est d'une grande souplesse car il permet aussi d'assigner un type 
-  à une variable en particulier à l'intérieur d'une série.
-
-@Example
+@Example Mélange d'affectations en série et individuelles
 @Code  
-   Define.q a, b.w, c, d  ; a, c, et d sont des Quad (.q) alors que b est un Word (.w)
+   Define.q a, b.w, c, d, st.s = "ok"  ; a, c, et d sont des Quad (.q), b est un Word (.w) et st est une String (.s)
 
-   Debug SizeOf(a) ; Affichera 8
-   Debug SizeOf(b) ; Affichera 2
-   Debug SizeOf(c) ; Affichera 8 
-   Debug SizeOf(d) ; Affichera 8
+   Debug SizeOf(a)  ; Affichera 8
+   Debug SizeOf(b)  ; Affichera 2
+   Debug SizeOf(c)  ; Affichera 8 
+   Debug SizeOf(d)  ; Affichera 8
+   Debug st         ; Affichera ok  
 @EndCode
-
-  @Keyword Define peut également être utilisé avec les @ReferenceLink "dim" "tableaux", 
-  les @ReferenceLink "newlist" "listes" et les @ReferenceLink "newmap" "maps". 
 
 ; -------------------------------------------------------------------------------------------------
 @FormatIf HTML

@@ -17,7 +17,7 @@
   @LineBreak
   @LineBreak
   PureBasic est un langage portable qui fonctionne actuellement sur les ordinateurs 
-  PC dotés du système d'exploitation Windows, Linux ou Mac OS X. 
+  PC dotés du système d'exploitation Windows, Linux ou Mac OS X et les machines sous Raspberry PI OS. 
   Cela signifie qu'un même programme peut être compilé sur chacune de ces machines 
   et en exploiter toute la puissance. PureBasic est un compilateur. Il n'utilise 
   donc pas de code intermédiaire ou de machine virtuelle, mais produit un code 
@@ -35,8 +35,8 @@
 
 @Section Caractéristiques techniques 
 
-  - Supporte nativement les microprocesseurs x86 et x64 @LineBreak 
-  - 83 bibliothèques natives @LineBreak 
+  - Supporte nativement les microprocesseurs Intel/AMD et autres x86 et x64, M1, M2, M3, arm32 et arm64 @LineBreak 
+  - 86 bibliothèques natives @LineBreak 
   - Des centaines de fonctions @LineBreak 
   - Définitions intégrées de tableaux, listes dynamiques, structures complexes, maps, pointeurs et variables @LineBreak
   - Types supportés : Byte (8-bit), Word (16-bit), Long (32-bit), Quad (64-bit), Flottant (32 et 64-bit) et Caractère (8 ou 16-bit) @LineBreak
@@ -68,9 +68,10 @@
   - 33 gadgets natifs @LineBreak
   - 1 gadget spécialisé dans l'OpenGL @LineBreak
   - 1 gadget scintilla @LineBreak
+  - 1 gadget webview pour créer facilement une interface utilisateur basée sur HTML/CSS @LineBreak
   - Processus, thread, mutex, semaphore @LineBreak
   - Drag'n drop @LineBreak
-  - DPI pour MS Windows@ LineBreak
+  - DPI pour MS Windows et OSX @LineBreak
   - QT and GTK3 pour Linux @LineBreak
   - Sous système DirectX et OpenGL @LineBreak
   - Import de bibliothèques statiques (lib) ou dynamiques (dll, so, etc) @LineBreak
@@ -136,6 +137,7 @@
     systray
     thread
     toolbar
+    webview
     window
     xml
 
@@ -170,6 +172,7 @@
     node
     nodeanimation
     particle
+    skeleton
     sound3d
     specialeffect
     spline
