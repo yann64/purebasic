@@ -73,7 +73,7 @@ Procedure DisableOptionGadgets()
     DisableGadget(#GADGET_Option_DPIAware, 1)
   CompilerEndIf
   
-  CompilerIf #CompileLinux | #CompileMac And Not #SpiderBasic; this stuff is windows only
+  CompilerIf #CompileLinux | #CompileMac And Not #SpiderBasic ; this stuff is Windows only
     DisableGadget(#GADGET_Option_EnableXP, 1)
     DisableGadget(#GADGET_Option_EnableAdmin, 1)
     DisableGadget(#GADGET_Option_EnableUser, 1)
@@ -81,7 +81,7 @@ Procedure DisableOptionGadgets()
     DisableGadget(#GADGET_Option_SharedUCRT, 1)
   CompilerEndIf
   
-  CompilerIf Not #CompileLinux
+  CompilerIf Not #CompileLinux And Not #SpiderBasic ; this stuff is Linux only
     DisableGadget(#GADGET_Option_EnableWayland, 1)
   CompilerEndIf
   

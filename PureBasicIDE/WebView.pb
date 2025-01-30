@@ -182,7 +182,7 @@ EndProcedure
 
 
 
-Procedure WebView_CreateFunction(*Entry.ToolsPanelEntry, PanelItemID)
+Procedure WebView_CreateFunction(*Entry.ToolsPanelEntry)
   
   StringGadget(#GADGET_WebView_Url, 4, 4, 0, 25, "", #PB_String_ReadOnly)
   ButtonImageGadget(#GADGET_WebView_OpenBrowser, 0, 4, 25, 25, ImageID(#IMAGE_WebView_OpenBrowser))
