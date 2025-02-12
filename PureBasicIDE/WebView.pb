@@ -156,7 +156,6 @@ Procedure WebView_Callback(JsonParameters$)
       ;
       If *WebViewDebugger\OutputFirstVisible
         OpenDebugWindow(*WebViewDebugger, #True)
-        *WebViewDebugger\OutputFirstVisible = 1
       EndIf
       
     Case #COMMAND_ControlDebugOutput
