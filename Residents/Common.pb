@@ -1071,8 +1071,9 @@ CompilerEndIf
 
 ; Sprite library
 ;
-#PB_Sprite_PixelCollision = 4
-#PB_Sprite_AlphaBlending  = 8
+#PB_Sprite_PixelCollision = 1 << 2
+#PB_Sprite_AlphaBlending  = 1 << 3
+#PB_Sprite_Transparent    = 1 << 4
 
 #PB_Sprite_NoFiltering       = 0
 #PB_Sprite_BilinearFiltering = 1
