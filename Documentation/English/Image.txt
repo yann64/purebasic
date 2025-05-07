@@ -193,7 +193,7 @@
 @LineBreak
 @LineBreak
   When an image is loaded, it is converted either in 24-bit (if the image depth
-  is less or equal to 24-bit) or in 32-bit (if the image has an alpha-channel).
+  is less or equal to 24-bit) or in 32-bit (if the image has an alpha channel).
   A loaded image can be freed by using the @@FreeImage function.
 @LineBreak
 @LineBreak
@@ -447,7 +447,7 @@
 
 @Remarks
   When loading an image, PureBasic converts it either in 24-bit or in 32-bit, depending
-  if the source image has an alpha-channel or not. Every image which has a
+  if the source image has an alpha channel or not. Every image which has a
   depth less than 24-bit will be internally converted to 24-bit.
 
 @SeeAlso
@@ -667,12 +667,12 @@
 @LineBreak
 @LineBreak
   When an image is loaded, it is converted either in 24-bit (if the image depth
-  is less or equal to 24-bit) or in 32-bit (if the image has an alpha-channel).
+  is less or equal to 24-bit) or in 32-bit (if the image has an alpha channel).
   A loaded image can be freed by using the @@FreeImage function.
 @LineBreak
 @LineBreak
   The image can be in BMP, icon (.ico, only on Windows) or any other format supported by the ImagePlugin library.
-  Transparency of BMP images is not supported.
+  Alpha channel is supported for 32-bit BMP images.
   The following functions can be used to enable automatically more image formats:
 @LineBreak
 @LineBreak
@@ -778,9 +778,15 @@
 @LineBreak
 @LineBreak
   When an image is saved using palettized depth (1, 4 or 8), the following
-  flag is available for combination:
+  flag is available:
 @FixedFont
   @#PB_Image_FloydSteinberg: Apply a Floyd-Steinberg dithering.
+@EndFixedFont
+  When a 32-bit image is saved in a lower depth (24-bit or lower) the following flags are available to change the color used
+  to fill the transparent area:
+@FixedFont
+  @#PB_Image_WhiteAlphaBackground: the resulting image will use white color when transparent area is found (default)
+  @#PB_Image_BlackAlphaBackground: the resulting image will use black color when transparent area is found
 @EndFixedFont
 
 @OptionalParameter "Depth"
