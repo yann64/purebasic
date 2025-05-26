@@ -394,6 +394,11 @@ Procedure CreateAppWindowEvents(EventID)
              #GADGET_AndroidApp_EnableDebugger
           UpdateCreateAppWindow()
           
+       Case #GADGET_AndroidApp_CheckInstall
+          If MessageRequester(#ProductName$, Language("AndroidApp","DoCheckInstall"), #FLAG_Info | #PB_MessageRequester_YesNo) = #PB_MessageRequester_Yes
+            RunProgram("open", "-a Terminal.app " + #DQUOTE$ + PureBasicPath$ + "install-cordova.sh" + #DQUOTE$, "", #PB_Program_Wait)
+          EndIf
+          
         Case #GADGET_iOSApp_CheckInstall
           If MessageRequester(#ProductName$, Language("iOSApp","DoCheckInstall"), #FLAG_Info | #PB_MessageRequester_YesNo) = #PB_MessageRequester_Yes
             RunProgram("open", "-a Terminal.app " + #DQUOTE$ + PureBasicPath$ + "install-cordova.sh" + #DQUOTE$, "", #PB_Program_Wait)

@@ -1,4 +1,4 @@
-﻿; --------------------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------------------
 ;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
@@ -926,6 +926,7 @@ Runtime Enumeration 1 ; 0 is reserved for uninitialized #PB_Any
     #GADGET_AndroidApp_EnableDebugger
     #GADGET_AndroidApp_KeepAppDirectory
     #GADGET_AndroidApp_InsecureFileMode
+    #GADGET_AndroidApp_CheckInstall
     
     #GADGET_iOSApp_Name
     #GADGET_iOSApp_Icon

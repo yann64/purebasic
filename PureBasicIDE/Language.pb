@@ -1,4 +1,4 @@
-﻿; --------------------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------------------
 ;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
@@ -1474,7 +1474,9 @@ DataSection
     Data$ "WrongOutputExtension", "Android app filename extension needs to be '.apk'"
     Data$ "InsecureFileMode",     "Enable insecure HTTP support (not recommended)"
     Data$ "EnableDebugger",       "Enable debugger (no additional '.aab' package will be created)"
-    
+    Data$ "CheckInstall",         "Check Cordova setup"
+    Data$ "DoCheckInstall",       "Do you want to launch the Cordova check ?"
+
     ; ===================================================
     ;- Group - Resources
     Data$ "_GROUP_",            "iOSApp"
