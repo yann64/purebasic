@@ -157,7 +157,7 @@ WebSocket server implementation: @InternetLink "https://github.com/Dadido3/WebSo
 @EndCode
 
 @SeeAlso
-  @@OpenWebSocket, @@SendWebSocketData
+  @@OpenWebSocket, @@SendWebSocketData, @@EventString
  
 @SupportedOS
 
