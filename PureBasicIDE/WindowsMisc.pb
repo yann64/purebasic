@@ -83,6 +83,7 @@ CompilerIf #CompileWindows
       CompilerIf Defined(FredLocalCompile, #PB_Constant) ; Fred config
         CompilerIf #PB_Compiler_Processor = #PB_Processor_x64
           CompilerIf #SpiderBasic
+            CompilerError "Use PureBasic x86 to compile the SpiderBasic IDE on Windows"
             PureBasicPath$ = "C:\PureBasic\Svn\"+#SVNVersion+"\Build\SpiderBasic_x64\"
           CompilerElse
             PureBasicPath$ = "C:\PureBasic\Svn\"+#SVNVersion+"\Build\PureBasic_x64\"

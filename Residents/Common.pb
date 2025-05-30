@@ -366,6 +366,7 @@ EndStructure
 #PB_Event_FirstCustomValue     = 1 << 16
 #PB_EventType_FirstCustomValue = 1 << 18
 
+; For Web, these are declared in the JavaScript specific file
 CompilerIf #PB_Compiler_OS <> #PB_OS_Web
   #PB_EventType_LeftClick         = 0
   #PB_EventType_RightClick        = 1
@@ -714,16 +715,17 @@ CompilerEndIf
 #PB_EventType_KeyUp               = $10000 + 12
 #PB_EventType_Input               = $10000 + 13
 
-; WebGadget
-;
-#PB_EventType_TitleChange      = $10050 + 1
-#PB_EventType_StatusChange     = $10050 + 2
-#PB_EventType_PopupWindow      = $10050 + 3
-#PB_EventType_DownloadStart    = $10050 + 4
-#PB_EventType_DownloadProgress = $10050 + 5
-#PB_EventType_DownloadEnd      = $10050 + 6
-#PB_EventType_PopupMenu        = $10050 + 7
-
+CompilerIf #PB_Compiler_OS <> #PB_OS_Web
+  ; WebGadget
+  ;
+  #PB_EventType_TitleChange      = $10050 + 1
+  #PB_EventType_StatusChange     = $10050 + 2
+  #PB_EventType_PopupWindow      = $10050 + 3
+  #PB_EventType_DownloadStart    = $10050 + 4
+  #PB_EventType_DownloadProgress = $10050 + 5
+  #PB_EventType_DownloadEnd      = $10050 + 6
+  #PB_EventType_PopupMenu        = $10050 + 7
+CompilerEndIf
 
 ; Flags for CanvasGadget
 ;
@@ -865,17 +867,19 @@ EndEnumeration
 
 ; HTTP library
 ;
-#PB_HTTP_Success     = -2
-#PB_HTTP_Failed      = -3
-#PB_HTTP_Aborted     = -4
-
-#PB_HTTP_Asynchronous = (1 << 0)
-#PB_HTTP_NoRedirect   = (1 << 1)
-#PB_HTTP_NoSSLCheck   = (1 << 2)
-#PB_HTTP_HeadersOnly  = (1 << 3)
-#PB_HTTP_WeakSSL      = (1 << 4)
-#PB_HTTP_Debug        = (1 << 5)
-
+CompilerIf #PB_Compiler_OS <> #PB_OS_Web
+  #PB_HTTP_Success     = -2
+  #PB_HTTP_Failed      = -3
+  #PB_HTTP_Aborted     = -4
+  
+  #PB_HTTP_Asynchronous = (1 << 0)
+  #PB_HTTP_NoRedirect   = (1 << 1)
+  #PB_HTTP_NoSSLCheck   = (1 << 2)
+  #PB_HTTP_HeadersOnly  = (1 << 3)
+  #PB_HTTP_WeakSSL      = (1 << 4)
+  #PB_HTTP_Debug        = (1 << 5)
+CompilerEndIf  
+  
 #PB_HTTP_Get = 0
 #PB_HTTP_Post = 1
 #PB_HTTP_Put = 2
@@ -883,8 +887,12 @@ EndEnumeration
 #PB_HTTP_Delete = 4
 
 #PB_HTTP_StatusCode = 0
-#PB_HTTP_Response = 1
-#PB_HTTP_ErrorMessage = 2
+CompilerIf #PB_Compiler_OS = #PB_OS_Web
+  #PB_HTTP_StatusText = 1
+CompilerElse
+  #PB_HTTP_Response = 1
+  #PB_HTTP_ErrorMessage = 2
+CompilerEndIf
 #PB_HTTP_Headers = 3
 
 #PB_URL_Protocol   = "/PC/"

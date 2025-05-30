@@ -76,6 +76,8 @@ IncludeFile "../Common.pb"
 #PB_Image_Smooth = 0
 #PB_Image_Raw    = 1
 
+#PB_Image_Base64 = 1 ; LoadImage()
+
 ; ToolBar icon definitions
 ;
 
@@ -165,6 +167,7 @@ IncludeFile "../Common.pb"
 #PB_Event_SizeDesktop      = 21
 #PB_Event_WebSocket        = 22
 #PB_Event_Mobile           = 23
+#PB_Event_Notification     = 24
 
 ; Loading type
 ;
@@ -200,6 +203,10 @@ IncludeFile "../Common.pb"
 #PB_EventType_Data              = 12
 #PB_EventType_String            = 13
 #PB_EventType_Error             = 14
+#PB_EventType_Resize            = 15
+#PB_EventType_PageLoaded        = 16
+#PB_EventType_NotificationClicked   = 17
+#PB_EventType_NotificationTriggered = 18
 
 ; Window flags
 ;
@@ -247,6 +254,28 @@ IncludeFile "../Common.pb"
 #PB_DirectoryEntry_Directory = 2
 
 #PB_FileSystem_NoExtension = 1
+
+; Notification
+;
+#PB_Notification_Secret   = (1 << 1)
+#PB_Notification_Progress = (1 << 2)
+
+#PB_Notification_At        = 0
+#PB_Notification_InSecond  = 1
+#PB_Notification_InMinute  = 2
+#PB_Notification_InHour    = 3
+#PB_Notification_InDay     = 4
+#PB_Notification_InWeek    = 5
+#PB_Notification_InMonth   = 6
+#PB_Notification_InQuarter = 7
+#PB_Notification_InYear    = 8
+#PB_Notification_EveryDate = 9
+#PB_Notification_EveryMinute = 10
+#PB_Notification_EveryHour   = 11
+#PB_Notification_EveryDay    = 12
+#PB_Notification_EveryWeek   = 13
+#PB_Notification_EveryMonth  = 14
+#PB_Notification_EveryYear   = 15
 
 ; LoadScript()
 ;
@@ -402,6 +431,8 @@ IncludeFile "../Common.pb"
 
 #PB_Image_Raised = 1 << 0
 #PB_Image_Border = 1 << 1
+
+
 
 #PB_ProgressBar_Smooth   = 1
 
