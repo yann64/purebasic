@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Http library documentation
 ;
 ;      (c) Fantaisie Software

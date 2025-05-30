@@ -1,4 +1,4 @@
-@Title Inline Javascript
+﻿@Title Inline Javascript
 
 @Section Introduction
 
