@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Texture library documentation
 ;
-;      (c) 2013 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Texture
@@ -192,7 +192,9 @@ it from disk. @@InitEngine3D must be called successfully before using the Textur
   as '#Texture' parameter, the new texture number is returned.
 
 @Remarks
-  @@TextureOutput is not supported on rendered textures.
+  @@TextureOutput is not supported on rendered textures. @LineBreak
+  The Automatic update only happen when @@RenderWorld is called. If another texture has the same name,
+  the texture creation will fail.
 
 @SeeAlso
   @@UpdateRenderTexture

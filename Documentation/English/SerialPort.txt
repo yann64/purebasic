@@ -1,4 +1,4 @@
-;
+﻿;
 ;     SerialPort library documentation
 ;
 ;      (c) Fantaisie Software

@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Gadget3D library documentation
 ;
 ;      (c) Fantaisie Software

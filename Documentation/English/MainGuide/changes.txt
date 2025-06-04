@@ -1,4 +1,4 @@
-@Title Changes
+﻿@Title Changes
 
 @Bold "Changes by libraries from v3.94 to v4.00"
 

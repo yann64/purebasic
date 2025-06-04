@@ -1,4 +1,4 @@
-;
+ï»¿;
 ; Clipboard library documentation
 ;
 ; (c) Fantaisie Software
@@ -11,13 +11,13 @@
   Le presse-papier (clipboard) est le 
   moyen standard pour partager des 
   informations entre les applications 
-  lancées depuis le système d'exploitation. 
+  lancÃ©es depuis le systÃ¨me d'exploitation. 
   Par exemple lorsque l'on coupe un texte 
-  dans un éditeur, il est envoyé dans le 
-  presse-papier et peut ensuite être 
-  retrouvé et déposé dans un autre éditeur 
+  dans un Ã©diteur, il est envoyÃ© dans le 
+  presse-papier et peut ensuite Ãªtre 
+  retrouvÃ© et dÃ©posÃ© dans un autre Ã©diteur 
   de texte.
-  PureBasic permet de copier et récupérer 
+  PureBasic permet de copier et rÃ©cupÃ©rer 
   facilement du texte et des images dans 
   le presse-papier.
   
@@ -44,7 +44,7 @@
   SetClipboardText("Un exemple de texte")
   MessageRequester("Presse-papier","Le presse papier contient le texte suivant : " + GetClipboardText())
 
-  ; Le presse-papier est effacé
+  ; Le presse-papier est effacÃ©
   ClearClipboard()
   MessageRequester("Presse-papier","Le presse papier contient le texte suivant : " + GetClipboardText())
 @EndCode
@@ -59,43 +59,43 @@
 @Function Resultat = GetClipboardImage(#Image [, Profondeur])
 
 @Description
-  Crée une nouvelle image à partir d'une image contenue dans le presse-papier (si elle existe).
+  CrÃ©e une nouvelle image Ã  partir d'une image contenue dans le presse-papier (si elle existe).
   
 @Parameter "#Image"
-  Numéro de la nouvelle image.
+  NumÃ©ro de la nouvelle image.
 @LineBreak
 @LineBreak  
-  @ReferenceLink "purebasic_objects" "PB_Any#" peut être utilisé pour générer automatiquement ce numéro. 
+  @ReferenceLink "purebasic_objects" "PB_Any#" peut Ãªtre utilisÃ© pour gÃ©nÃ©rer automatiquement ce numÃ©ro. 
  
 @OptionalParameter "Profondeur"
   La profondeur de couleur de l'image.
 @LineBreak
 @LineBreak    
-  Les valeurs valides sont 24 bits (par défaut) ou 32 bits.
+  Les valeurs valides sont 24 bits (par dÃ©faut) ou 32 bits.
 
 @ReturnValue
-  Renvoie une valeur non nulle en cas de succès, zéro sinon. 
+  Renvoie une valeur non nulle en cas de succÃ¨s, zÃ©ro sinon. 
 @LineBreak
 @LineBreak
-  Si @#PB_Any est utilisé pour le paramètre '#Image', le numéro de la nouvelle image 
-  sera renvoyé dans 'Resultat'.
+  Si @#PB_Any est utilisÃ© pour le paramÃ¨tre '#Image', le numÃ©ro de la nouvelle image 
+  sera renvoyÃ© dans 'Resultat'.
   
 @Remarks
-  Sous Windows, il se peut que la transparence ne soit pas détectée une fois l'image du presse-papier 
-  collée dans un logiciel tiers. (L'enregistrement de cette image au format png conserve la transparence.)
-  Il s'agit d'un problème lié au format BMP et à la façon dont Windows 
-  le gère. Il est possible d'avoir une image bitmap 32 bits sans canal alpha. Dans ce cas, toutes les 
-  valeurs alpha sont 0 mais l'image est censée être opaque.
-  Étant donné que les images dans GetClipboardImage() peuvent provenir de l'extérieur de PB, nous ne 
-  pouvons pas savoir si l'image est censée être entièrement transparente ou entièrement opaque. C'est 
+  Sous Windows, il se peut que la transparence ne soit pas dÃ©tectÃ©e une fois l'image du presse-papier 
+  collÃ©e dans un logiciel tiers. (L'enregistrement de cette image au format png conserve la transparence.)
+  Il s'agit d'un problÃ¨me liÃ© au format BMP et Ã  la faÃ§on dont Windows 
+  le gÃ¨re. Il est possible d'avoir une image bitmap 32 bits sans canal alpha. Dans ce cas, toutes les 
+  valeurs alpha sont 0 mais l'image est censÃ©e Ãªtre opaque.
+  Ã‰tant donnÃ© que les images dans GetClipboardImage() peuvent provenir de l'extÃ©rieur de PB, nous ne 
+  pouvons pas savoir si l'image est censÃ©e Ãªtre entiÃ¨rement transparente ou entiÃ¨rement opaque. C'est 
   pourquoi nous n'utilisons le canal alpha que s'il y a au moins un pixel avec une valeur autre que 0. 
   Sinon, nous la traitons comme une image opaque. 
 @LineBreak
 @LineBreak
-  L'image ainsi obtenue peut être détruite à l'aide de la commande @@FreeImage.
+  L'image ainsi obtenue peut Ãªtre dÃ©truite Ã  l'aide de la commande @@FreeImage.
 @LineBreak
 @LineBreak
-  Pour plus d'information sur les images, voir la bibliothèque @LibraryLink "Image" "Image" 
+  Pour plus d'information sur les images, voir la bibliothÃ¨que @LibraryLink "Image" "Image" 
   ou le gadget @@ImageGadget.
 
 @Example 
@@ -165,14 +165,14 @@
 @Function Resultat$ = GetClipboardText()
 
 @Description
-  Renvoie le texte actuellement stocké dans 
+  Renvoie le texte actuellement stockÃ© dans 
   le presse-papier.
   
 @NoParameters
 
 @ReturnValue 
-  Renvoie le texte stocké dans le presse-papier 
-  ou une chaîne vide sinon.
+  Renvoie le texte stockÃ© dans le presse-papier 
+  ou une chaÃ®ne vide sinon.
 
 @Example 
 @Code
@@ -194,13 +194,13 @@
   Met une copie d'une image dans le presse-papier. 
   
 @Parameter "#Image"
-  Numéro de l'image à mettre dans le presse-papier.
+  NumÃ©ro de l'image Ã  mettre dans le presse-papier.
 
 @NoReturnValue 
 
 @Remarks  
-  Si une image est déjà présente  dans le 
-  presse-papier, elle sera remplacée par la 
+  Si une image est dÃ©jÃ  prÃ©sente  dans le 
+  presse-papier, elle sera remplacÃ©e par la 
   nouvelle.
 
 @Example 
@@ -244,13 +244,13 @@
  Place un texte dans le presse-papier. 
  
 @Parameter "Texte$"
-  Le texte à placer dans le presse-papier
+  Le texte Ã  placer dans le presse-papier
   
 @NoReturnValue 
  
 @Remarks  
-  Si le presse-papier contient déjà un texte 
-  celui-ci est remplacé.
+  Si le presse-papier contient dÃ©jÃ  un texte 
+  celui-ci est remplacÃ©.
 
 @Example 
 @Code

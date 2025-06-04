@@ -1,4 +1,4 @@
-;
+﻿;
 ;     FTP library documentation
 ;
 ;      (c) Fantaisie Software

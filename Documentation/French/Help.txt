@@ -1,4 +1,4 @@
-;
+ï»¿;
 ; Help library documentation
 ;
 ; (c) Fantaisie Software
@@ -8,18 +8,18 @@
 
 @Overview
 
-  L'aide (help) est un composant clé d'un 
-  logiciel. Cela permet à l'utilisateur 
-  d'en découvrir facilement et efficacement 
+  L'aide (help) est un composant clÃ© d'un 
+  logiciel. Cela permet Ã  l'utilisateur 
+  d'en dÃ©couvrir facilement et efficacement 
   les fonctions. PureBasic permet d'afficher 
-  des fichiers d'aide normalisés traitant 
+  des fichiers d'aide normalisÃ©s traitant 
   un niveau global et un niveau contextuel.
   
 @OS Windows
 @LineBreak
 @LineBreak
   Sous Microsoft Windows, deux types de 
-  formats sont supportés: .hlp 
+  formats sont supportÃ©s: .hlp 
   (ancien format) et .chm (nouveau format 
   compatible HTML).
 @EndOS
@@ -34,7 +34,7 @@
 @Function CloseHelp()
 
 @Description
-  Ferme la fenêtre d'aide préalablement 
+  Ferme la fenÃªtre d'aide prÃ©alablement 
   ouverte avec @@OpenHelp.
   
 @NoParameters
@@ -83,15 +83,15 @@
 @Function OpenHelp(NomFichier$, Theme$)
 
 @Description
-  Ouvre et affiche une fenêtre d'aide. 
+  Ouvre et affiche une fenÃªtre d'aide. 
 
 @Parameter "NomFichier$" 
   Le nom du fichier d'aide .chm ou .hlp 
-  à utiliser.
+  Ã  utiliser.
 
 @Parameter "Theme$"
-  Le nom de la page à afficher.@LineBreak
-  Très utile pour l'aide en ligne / 
+  Le nom de la page Ã  afficher.@LineBreak
+  TrÃ¨s utile pour l'aide en ligne / 
   contextuelle).
 
 @NoReturnValue

@@ -1,4 +1,4 @@
-@Title Order
+ï»¿@Title Order
 
   @Bold "PureBasic" is a low-cost programming language. In buying PureBasic you will ensure that 
   development will go further and faster. For personal use (i.e.: not used by a commercial organization) 
@@ -27,7 +27,7 @@
 @Section If you live in Germany or Europe and prefer paying to bank account you can also send your registration to the German team member. In this case please send your order to following address:
 
   @FixedFont
-    André Beer
+    AndrÃ© Beer
     Siedlung 6
     09548 Deutschneudorf
     Germany
@@ -40,11 +40,11 @@
 
     @Bold "Paypal":
     andrebeer@gmx.de
-    (This address can be used for Paypal transaction, if you want personal contact to or an invoice from André.)
+    (This address can be used for Paypal transaction, if you want personal contact to or an invoice from AndrÃ©.)
   @EndFixedFont
 
 @Section Delivering of the full version
 
   The full version will be provided via your personal download account, which you will get on www.purebasic.com after successful registration.
-  If you order from André, just write an e-mail with your full address or use this @MainGuideLink "RegForm2" "registration form" and print it
+  If you order from AndrÃ©, just write an e-mail with your full address or use this @MainGuideLink "RegForm2" "registration form" and print it
   or send it via e-mail.

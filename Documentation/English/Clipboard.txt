@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Clipboard library documentation
 ;
 ;      (c) 2010 - Fantaisie Software

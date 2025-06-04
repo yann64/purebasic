@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Window3D library documentation
 ;
 ;      (c) Fantaisie Software

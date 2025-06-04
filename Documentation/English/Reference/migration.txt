@@ -1,4 +1,4 @@
-@Title Migration guide
+﻿@Title Migration guide
 
 @Section Introduction
   PureBasic is a modern programming language which evolves quickly to follow technologic changes

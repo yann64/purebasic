@@ -1,4 +1,4 @@
-@Title Define
+ï»¿@Title Define
 
 @Syntax
 
@@ -8,14 +8,14 @@
 
   Weist einer Reihe an @ReferenceLink "variables" "Variablen" den gleichen Variablentyp zu.
   @LineBreak
-  Ohne dieses Schlüsselwort werden Variablen mit dem Standardtyp von PureBasic deklariert,
+  Ohne dieses SchlÃ¼sselwort werden Variablen mit dem Standardtyp von PureBasic deklariert,
   welcher vom Typ INTEGER ist. Zur Erinnerung, der Typ INTEGER umfasst: @LineBreak
   4 Byte (mit einem 32-Bit Compiler), im Bereich von -2147483648 bis +2147483647 @LineBreak
   8 Byte (mit einem 64-Bit Compiler), im Bereich von -9223372036854775808 bis +9223372036854775807
   @LineBreak
   @LineBreak
   @Keyword Define ist sehr flexibel, da Sie damit auch einer einzelnen Variable innerhalb einer
-  Serie einen (abweichenden) Typ zuweisen können.
+  Serie einen (abweichenden) Typ zuweisen kÃ¶nnen.
   @LineBreak
   @LineBreak
   @Keyword Define kann auch mit @ReferenceLink "dim" "Arrays", @ReferenceLink "newlist" "Linked Lists"
@@ -45,7 +45,7 @@
 
 @Description
   
-  Alternative Möglichkeit zur Variablendeklaration mittels @Keyword "Define".
+  Alternative MÃ¶glichkeit zur Variablendeklaration mittels @Keyword "Define".
 
 @Example
 

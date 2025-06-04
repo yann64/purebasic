@@ -1,4 +1,4 @@
-@Title Building a DLL
+﻿@Title Building a DLL
 
   PureBasic allows to create standard Microsoft Windows DLL (Dynamic Linked Library), shared objects (.so) on Linux,
   and dynamic libraries (.dylib) on MacOS X. 

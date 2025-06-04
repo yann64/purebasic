@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Help library documentation - MultiOS version !
 ;
 ;      (c) 2011 - Fantaisie Software

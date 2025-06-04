@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Vehicle library documentation
 ;
 ;      (c) 2016 - Fantaisie Software

@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Dialog library documentation
 ;
 ;      (c) 2024 - Fantaisie Software
@@ -12,7 +12,9 @@
   on different operating systems or working with different @LibraryLink "font" "font" size. @LineBreak
   @LineBreak
   The XML definition can be file based, or created on the fly in memory using the @LibraryLink "xml" "XML" library.
- 
+  @LineBreak
+  To find a list of all supported keywords and attributes of this library, see @Link "OpenXMLDialog" "here".
+  
 @CommandList
 
 @ExampleFile All Dialog.pb

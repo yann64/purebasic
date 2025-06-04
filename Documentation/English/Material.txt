@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Material library documentation
 ;
 ;       (c) 2021 - Fantaisie Software

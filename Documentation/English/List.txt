@@ -1,4 +1,4 @@
-;
+﻿;
 ;     List library documentation
 ;
 ;      (c) 2018 - Fantaisie Software
@@ -936,7 +936,7 @@
 
 @Description
   Remembers the current element (if any) of the list so it can later be restored using @@PopListPosition. The position
-  is remembered on a stack structure, so multiple calls to this function are possible.
+  is remembered on a stack (a lifo stack: last in, first out), so multiple calls to this function are possible.
 
 @Parameter "List()"
   The name of your list variable, created with the @ReferenceLink "newlist" "NewList" function.
@@ -954,6 +954,9 @@
   Note: It is not allowed to delete an element that is a remembered current element using the @@DeleteElement or
   @@ClearList function. This may result in a crash when @@PopListPosition is called because the elements memory
   is no longer valid. 
+@LineBreak
+@LineBreak
+  The stack used here is a memory area, not a list.
 
 @Example
 @Code

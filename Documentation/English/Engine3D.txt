@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Engine3D library documentation
 ;
-;      (c) 2017 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Engine3D
@@ -560,7 +560,8 @@ The OGRE license file can be consulted @ReferenceLink "license_engine3d" "here" 
 @Remarks  
   InitEngine3D() tries to load the Engine3D library (named 'Engine3D.dll' on Windows, 'engine3d.so' on Linux
   and 'engine3d.dylib' on OS X, found in the PureBasic/compilers/ directory). If it fails, it's probably because the library
-  is not found or doesn't match the current PureBasic version. On Windows, a recent version of openGL drivers needs to be installed. 
+  is not found or doesn't match the current PureBasic version. On Windows, a recent version of openGL drivers needs to be installed. @LineBreak 
+  After calling this function, you will not be able to use the @@ScreenOutput function.
 
 @SeeAlso
   @@OpenScreen, @@OpenWindowedScreen, @@Add3DArchive
@@ -655,8 +656,8 @@ The OGRE license file can be consulted @ReferenceLink "license_engine3d" "here" 
 @Parameter "x, y"
   The coordinates, in pixels, of the point.
   
-@OptionalParameter "Locked"
-  If sets to @#True, the picked body won't be able to freely rotate when moving it. If sets to @#False, the body will rotate
+@Parameter "Locked"
+  If set to @#True, the picked body won't be able to freely rotate when moving it. If set to @#False, the body will rotate
   freely according to body move.
 
 @ReturnValue

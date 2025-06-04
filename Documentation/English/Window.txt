@@ -1,4 +1,4 @@
-;
+ï»¿;
 ;     Window library documentation
 ;
 ;      (c) Fantaisie Software
@@ -159,7 +159,7 @@
   'Apple' key (left or right) to define shortcuts. This constant is also supported on others OS (to ease
   portability), but will act like @#PB_Shortcut_Control. The shortcuts Apple+Q and Apple+P, are
   predefined on Mac OSX for the @#PB_Menu_Quit and @#PB_Menu_Preferences menu entries
-  in the @LibraryLink "Menu" "application menu" and cannot be reassigned.
+  in the @LibraryLink "Menu" "application menu" and cannot be reassigned. MDI child windows are not supported.
 
 @Example
 @Code
@@ -788,7 +788,7 @@
   @#PB_Window_SizeGadget    : Adds the sizeable feature to a window.
   @#PB_Window_Invisible     : Creates the window but don't display.
   @#PB_Window_TitleBar      : Creates a window with a titlebar.
-  @#PB_Window_Tool          : Creates a window with a smaller titlebar and no taskbar entry. 
+  @#PB_Window_Tool          : Creates a window with no taskbar entry. 
   @#PB_Window_BorderLess    : Creates a window without any borders.
   @#PB_Window_ScreenCentered: Centers the window in the middle of the screen. x,y parameters are ignored.
   @#PB_Window_WindowCentered: Centers the window in the middle of the parent window ('ParentID' parameter must be specified).
@@ -812,7 +812,7 @@
 @Linebreak
   Windows only: for special situations callbacks are used, see description at @@SetWindowCallback. On Windows,
   the height and width of a window with a titlebar can't be less than around 100 pixels. To open smaller windows, use the @ConstantColor
-  "#PB_Window_BorderLess" flag.
+  "#PB_Window_BorderLess" flag. On Windows, the @#PB_Window_Maximize flag without the maximize gadget will get the full screen size covering the task bar.
 @Linebreak
 @Linebreak
   @Bold "Important:" A window should not be opened in a @LibraryLink "thread" "thread", as there is some limitation on OS X and Linux.
@@ -945,6 +945,9 @@
 
 @NoReturnValue
 
+@SeeAlso
+  @@ResizeGadget, @@BindEvent
+  
 @SupportedOS
 
 ;--------------------------------------------------------------------------------------------------------
@@ -1287,7 +1290,7 @@
   @Bold "Important:" If you use a @@FlipBuffers somewhere in your code, so 
   the 'Delay(1)' is not necessary.
   
-@Example n°1 With Gadget
+@Example nÂ°1 With Gadget
 @Code
     If OpenWindow(0, 0, 0, 600, 100, "Position of the mouse on the window: ", #PB_Window_SystemMenu | #PB_Window_ScreenCentered)
     TextGadget(0, 10, 6, 200, 20, "")
@@ -1305,7 +1308,7 @@
   EndIf
 @EndCode   
 
-@Example n°2 With Gadget
+@Example nÂ°2 With Gadget
 @Code
   If OpenWindow(0, 0, 0, 300, 30, "Position of the mouse on the desktop", #PB_Window_SystemMenu | #PB_Window_ScreenCentered)
     TextGadget(0, 10, 6, 200, 20, "")
@@ -1587,7 +1590,7 @@
   Until Event = #PB_Event_CloseWindow
 @EndCode
 
-@SeeAlso @@BindGadgetEvent, @@BindMenuEvent, @@UnbindEvent, @@WindowEvent, @@WaitWindowEvent
+@SeeAlso @@BindGadgetEvent, @@BindMenuEvent, @@UnbindEvent, @@WindowEvent, @@WaitWindowEvent, @@ResizeWindow, @@ResizeGadget
 
 @SupportedOS
 

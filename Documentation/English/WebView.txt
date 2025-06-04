@@ -1,4 +1,4 @@
-;
+﻿;
 ;     WebView library documentation
 ;
 ;      (c) 2025 - Fantaisie Software
@@ -34,7 +34,7 @@
 @Function Result = WebViewGadget(#Gadget, x, y, Width, Height [, Flags])
 
 @Description
-  Creates a new web view gadget in the current GadgetList. If needed a proxy can be set with @@WebWiewProxy.
+  Creates a new web view gadget in the current GadgetList. If needed a proxy can be set with @@WebViewProxy.
 
 @Parameter "#Gadget"
   A number to identify the new gadget. @ReferenceLink "purebasic_objects" "#PB_Any" can
@@ -66,7 +66,8 @@
   pathname.
 @LineBreak
 @LineBreak
-  - @@SetGadgetItemText: With @#PB_WebView_HtmlCode as 'Item' html code can be streamed into the gadget.
+  - @@SetGadgetItemText: With @#PB_WebView_HtmlCode as 'Item' html code can be streamed into the gadget. The html is treated 
+  as untrusted local content and some permission are not allowed.
 @LineBreak
 
 @Example using local HTML and CSS files
@@ -165,7 +166,7 @@
   Until Event = #PB_Event_CloseWindow
 @EndCode
 
-@SeeAlso @@WebViewExecuteScript, @@BindWebViewCallback, @@WebWiewProxy
+@SeeAlso @@WebViewExecuteScript, @@BindWebViewCallback, @@WebViewProxy
 
 @SupportedOS
 
@@ -200,6 +201,10 @@
   The callback procedure can return a result which can be used by the JavaScript function. 
 
 @NoReturnValue
+
+@Remarks
+  If your JavaScript callback function returns a @@UTF8 generated result instead of 0, PureBasic will
+  automatically free the memory used to return it when it is no longer needed.
 
 @Example with a 2 parameters Javascript function
 @Code
@@ -245,7 +250,8 @@
   Until Event = #PB_Event_CloseWindow
 @EndCode
 
-@SeeAlso @@WebViewGadget, @@UnbindWebViewCallback
+@SeeAlso
+  @@WebViewGadget, @@UnbindWebViewCallback
 
 @SupportedOS
 
@@ -319,7 +325,7 @@
 
 ;--------------------------------------------------------------------------------------------------------
 
-@Function WebWiewProxy(URL$, Port [Username$, Password$])
+@Function WebViewProxy(URL$, Port [Username$, Password$])
 
 @Description
   Setup a proxy for all the future @@WebViewGadget created. This means than all the external link and URL will goes trough

@@ -1,4 +1,4 @@
-@Title Integrated form designer
+﻿@Title Integrated form designer
 
   The PureBasic IDE has a very powerful integrated form designer, which allows to design
   easily windows and arrange gadgets on them. It supports almost all native PureBasic @LibraryLink "gadget" "gadgets",

@@ -1,7 +1,7 @@
-;
+﻿;
 ;     String library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library String
@@ -424,6 +424,9 @@
   Debug Len("This is Art") ; wird 11 ausgeben
 @EndCode
 
+@SeeAlso
+  @@StringByteLength
+  
 @SupportedOS
 
 ;--------------------------------------------------------------------------------------------------------
@@ -742,8 +745,6 @@
   @#PB_UTF8   : UTF8-Format
   @#PB_Unicode: Unicode-Format
 @EndFixedFont
-  Wenn 'Format' nicht angegeben wird, dann wird der Modus des Executable
-  (@ReferenceLink "unicode" "Unicode" oder Ascii) verwendet.
 
 @ReturnValue
   Die Anzahl an benötigten Bytes, um den String im angegebenen Format im Speicher
@@ -758,6 +759,9 @@
 @Code
   Debug StringByteLength("ä", #PB_UTF8) ; wird 2 ausgeben
 @EndCode
+
+@SeeAlso
+  @@Len
 
 @SupportedOS
 
@@ -781,7 +785,7 @@
 @Example
 @Code
   For k = 1 To 6
-    Debug StringField("Hello I am a splitted string", k, " ")
+    Debug StringField("Hello I am a split string", k, " ")
   Next
 @EndCode
 
@@ -1177,8 +1181,8 @@
 @Function *Puffer = Ascii(String$)
 
 @Description
-  Erstellt eine ASCII-Darstellung des Strings. Wenn diese nicht mehr benötigt wird, muss
-  der Puffer mittels @@FreeMemory freigegeben werden.
+  Erstellt eine ASCII-Darstellung des Strings. Wenn der Puffer nicht mehr benötigt wird, muss
+  er mittels @@FreeMemory freigegeben werden.
 
 @Parameter "String$"
   Der zu konvertierende String.
@@ -1202,7 +1206,7 @@
 @EndCode
 
 @SeeAlso
-  @@UTF8
+  @@UTF8, @@FreeMemory, @@MemorySize
 
 @SupportedOS
 
@@ -1211,8 +1215,8 @@
 @Function *Puffer = UTF8(String$)
 
 @Description
-  Erstellt einen Puffer mit einer UTF8-Darstellung des Strings. Wenn er nicht mehr benötigt wird, muss
-  der Puffer mittels @@FreeMemory freigegeben werden.
+  Erstellt einen Puffer mit einer UTF8-Darstellung des Strings. Wenn der Puffer nicht mehr benötigt wird, muss
+  er mittels @@FreeMemory freigegeben werden.
 
 @Parameter "String$"
   Der zu konvertierende String.
@@ -1254,7 +1258,7 @@
 @EndCode
 
 @SeeAlso
-  @@Ascii
+  @@Ascii, @@FreeMemory, @@MemorySize
 
 @SupportedOS
 

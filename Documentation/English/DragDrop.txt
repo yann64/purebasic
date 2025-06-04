@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Drag & Drop library documentation
 ;
 ;      (c) 2023 - Fantaisie Software
@@ -785,7 +785,7 @@
 @Bold "Windows:"
 @Indent
 @Code
-  Procedure DragCallback(Action)
+  Procedure DragCallback(Action.l)
   
     ProcedureReturn #True
   EndProcedure
@@ -807,7 +807,7 @@
 @Bold "Linux:"
 @Indent
 @Code
-  Procedure DragCallback(*Context.GdkDragContext, isStart)
+  Procedure DragCallback(*Context.GdkDragContext, isStart.l)
   
   EndProcedure
 @EndCode

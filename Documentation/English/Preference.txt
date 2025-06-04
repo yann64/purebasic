@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Preference library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Preference
@@ -104,7 +104,7 @@
 @EndCode
 
 @SeeAlso
-  @@ClosePreferences
+  @@ClosePreferences, @@ProgramParameter
   
 @SupportedOS
 

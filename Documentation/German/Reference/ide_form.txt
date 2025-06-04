@@ -1,14 +1,14 @@
-@Title Integrierter Form-Designer
+ï»¿@Title Integrierter Form-Designer
 
-  Die PureBasic IDE hat einen sehr leistungsfähigen integrierten Form-Designer (auch
+  Die PureBasic IDE hat einen sehr leistungsfÃ¤higen integrierten Form-Designer (auch
   "Formular-Designer"), welcher einfach die Gestaltung von Fenstern und das Anordnen von
-  Gadgets darauf ermöglicht. Er unterstützt nahezu alle nativen PureBasic
-  @LibraryLink "gadget" "Gadgets", @LibraryLink "menu" "Menü" und sogar
+  Gadgets darauf ermÃ¶glicht. Er unterstÃ¼tzt nahezu alle nativen PureBasic
+  @LibraryLink "gadget" "Gadgets", @LibraryLink "menu" "MenÃ¼" und sogar
   @LibraryLink "statusbar" "Statusleisten". Eine Form-Datei (auch "Formular-Datei") ist eine
-  reguläre PureBasic-Datei, welche somit einfach verändert werden kann, ohne den Form-Designer
-  zu öffnen. Der Code-Parser ist nicht der Gleiche, wie er vom Compiler verwendet wird,
-  und unterstützt daher nicht alle Funktionen - wenn Sie daher manuelle Änderungen an
-  einer Form-Datei vornehmen, müssen diese grundlegend bleiben.
+  regulÃ¤re PureBasic-Datei, welche somit einfach verÃ¤ndert werden kann, ohne den Form-Designer
+  zu Ã¶ffnen. Der Code-Parser ist nicht der Gleiche, wie er vom Compiler verwendet wird,
+  und unterstÃ¼tzt daher nicht alle Funktionen - wenn Sie daher manuelle Ã„nderungen an
+  einer Form-Datei vornehmen, mÃ¼ssen diese grundlegend bleiben.
 
 @Section Contents of the "Form" menu:
 
@@ -112,17 +112,17 @@
 @LineBreak=======
 @Title Integrierter Form-Designer
 
-  Die PureBasic IDE hat einen sehr leistungsfähigen integrierten Form-Designer (auch
+  Die PureBasic IDE hat einen sehr leistungsfÃ¤higen integrierten Form-Designer (auch
   "Formular-Designer"), welcher einfach die Gestaltung von Fenstern und das Anordnen von
-  Gadgets darauf ermöglicht. Er unterstützt nahezu alle nativen PureBasic
-  @LibraryLink "gadget" "Gadgets", @LibraryLink "menu" "Menüs" und sogar
+  Gadgets darauf ermÃ¶glicht. Er unterstÃ¼tzt nahezu alle nativen PureBasic
+  @LibraryLink "gadget" "Gadgets", @LibraryLink "menu" "MenÃ¼s" und sogar
   @LibraryLink "statusbar" "Statusleisten". Eine Form-Datei (auch "Formular-Datei") ist eine
-  reguläre PureBasic-Datei, welche somit einfach verändert werden kann, ohne den Form-Designer
-  zu öffnen. Der Code-Parser ist nicht der Gleiche, wie er vom Compiler verwendet wird,
-  und unterstützt daher nicht alle Funktionen - wenn Sie daher manuelle Änderungen an
-  einer Form-Datei vornehmen, müssen diese grundlegend bleiben.
+  regulÃ¤re PureBasic-Datei, welche somit einfach verÃ¤ndert werden kann, ohne den Form-Designer
+  zu Ã¶ffnen. Der Code-Parser ist nicht der Gleiche, wie er vom Compiler verwendet wird,
+  und unterstÃ¼tzt daher nicht alle Funktionen - wenn Sie daher manuelle Ã„nderungen an
+  einer Form-Datei vornehmen, mÃ¼ssen diese grundlegend bleiben.
 
-@Section Inhalt des "Form" Menüs:
+@Section Inhalt des "Form" MenÃ¼s:
 
 @Image ide_menu_form.png
 
@@ -134,15 +134,15 @@
 
 @Bold "Ansicht umschalten (Code/Design)"
 @LineBreak
-  Ändert die Formular-Ansicht, wechselt vom Design-Modus in die Code-Ansicht. Ein Formular wird
-  aus Quellcode erstellt - wenn daher eine Änderung direkt in der Code-Ansicht erfolgt, so wird
+  Ã„ndert die Formular-Ansicht, wechselt vom Design-Modus in die Code-Ansicht. Ein Formular wird
+  aus Quellcode erstellt - wenn daher eine Ã„nderung direkt in der Code-Ansicht erfolgt, so wird
   diese auch visuell wiedergespiegelt.
 @LineBreak
 @LineBreak
 
 @Bold "Objekt duplizieren"
 @LineBreak
-  Dupliziert das aktuell ausgewählte Objekt.
+  Dupliziert das aktuell ausgewÃ¤hlte Objekt.
 @LineBreak
 @LineBreak
 
@@ -151,48 +151,48 @@
   @Image ide_form_imagemanager.png
 @LineBreak
 @LineBreak
-  Zeigt alle Bilder an, die aktuell vom Formular verwendet werden. Das Bild und sein Pfad können
-  hier einfach verändert werden.
+  Zeigt alle Bilder an, die aktuell vom Formular verwendet werden. Das Bild und sein Pfad kÃ¶nnen
+  hier einfach verÃ¤ndert werden.
   
 @Section Form-Designleiste
 
   @Image ide_form_designpanel.png
 
-  Diese Werkzeugleiste listet alle verfügbaren Gadgets auf. Wählen Sie eins aus, und zeichnen
-  Sie direkt auf dem Formular die benötigte Größe. Wenn ein Gadget auf dem Formular ausgewählt
-  wird, dann werden seine Eigenschaften auf dieser Leiste angezeigt und können auch hier
-  verändert werden.
+  Diese Werkzeugleiste listet alle verfÃ¼gbaren Gadgets auf. WÃ¤hlen Sie eins aus, und zeichnen
+  Sie direkt auf dem Formular die benÃ¶tigte GrÃ¶ÃŸe. Wenn ein Gadget auf dem Formular ausgewÃ¤hlt
+  wird, dann werden seine Eigenschaften auf dieser Leiste angezeigt und kÃ¶nnen auch hier
+  verÃ¤ndert werden.
   
 @Section Verwendung des Form-Designers in echten Projekten
 
-  Der Form-Designer wurde erschaffen, um modulare Formulare und deren einfache Wartung zu ermöglichen.
-  Jedes Formular muss seine eigene Datei haben. Es können sich keine zwei Formulare in der gleichen
+  Der Form-Designer wurde erschaffen, um modulare Formulare und deren einfache Wartung zu ermÃ¶glichen.
+  Jedes Formular muss seine eigene Datei haben. Es kÃ¶nnen sich keine zwei Formulare in der gleichen
   Datei befinden (mit anderen Worten, es sollten sich niemals zwei @@OpenWindow in der gleichen Datei
   befinden). Jedem Gadget kann eine Ereignis-Prozedur zugewiesen werden, welche automatisch in der
-  Ereignisschleife behandelt werden. Die Ereignis-Prozeduren müssen irgendwo im Quellcode definiert
+  Ereignisschleife behandelt werden. Die Ereignis-Prozeduren mÃ¼ssen irgendwo im Quellcode definiert
   werden. Jede Formular-Datei sollte mit der '.pbf' Endung benannt werden, damit sie von der IDE
-  richtig erkannt werden. Formular-Dateien können auch zu einem @ReferenceLink "ide_projects" "Projekt"
-  hinzugefügt werden.
+  richtig erkannt werden. Formular-Dateien kÃ¶nnen auch zu einem @ReferenceLink "ide_projects" "Projekt"
+  hinzugefÃ¼gt werden.
 @LineBreak
 @LineBreak
-  Um zum Beispiel ein Programm, welches zwei Fenster besitzt, zu erstellen, müssen wir zwei Formular-Dateien
-  und eine Haupt-Datei erstellen. Die Verzeichnisstruktur könnte wie folgt aussehen:
+  Um zum Beispiel ein Programm, welches zwei Fenster besitzt, zu erstellen, mÃ¼ssen wir zwei Formular-Dateien
+  und eine Haupt-Datei erstellen. Die Verzeichnisstruktur kÃ¶nnte wie folgt aussehen:
 @FixedFont  
   Main.pb        ; Die Haupt-PureBasic-Datei, welche die zwei Formular-Dateien einbindet und die Ereignisse definiert.
   MainWindow.pbf ; Das Hauptfenster.
   DateWindow.pbf ; Ein anderes Fenster.
 @EndFixedFont
-  Wenn wir davon ausgehen, dass MainWindow.pbf über zwei @Link "gadget/buttongadget" "Tasten" ('OK'
-  und 'Cancel') verfügt und DateWindow.pbf ein @Link "gadget/calendargadget" "CalendarGadget" besitzt,
-  dann würde die Haupt-Datei wie folgt aussehen (die Haupt-Datei wird nicht über den Form-Designer
+  Wenn wir davon ausgehen, dass MainWindow.pbf Ã¼ber zwei @Link "gadget/buttongadget" "Tasten" ('OK'
+  und 'Cancel') verfÃ¼gt und DateWindow.pbf ein @Link "gadget/calendargadget" "CalendarGadget" besitzt,
+  dann wÃ¼rde die Haupt-Datei wie folgt aussehen (die Haupt-Datei wird nicht Ã¼ber den Form-Designer
   verwaltet und muss manuell geschrieben werden):
   
 @Code  
   XIncludeFile "MainWindow.pbf" ; Einbinden der ersten Fenster-Definition
   XIncludeFile "DateWindow.pbf" ; Einbinden der zweiten Fenster-Definition
   
-  OpenMainWindow() ; Öffnet das erste Fenster. Dieser Prozedurname ist immer 'Open' gefolgt vom Fensternamen.
-  OpenDateWindow() ; Öffnet das zweite Fenster.
+  OpenMainWindow() ; Ã–ffnet das erste Fenster. Dieser Prozedurname ist immer 'Open' gefolgt vom Fensternamen.
+  OpenDateWindow() ; Ã–ffnet das zweite Fenster.
   
   ; Die Ereignis-Prozedur, wie diese in der Eigenschaft 'Ereignis-Prozedur' jedes Gadgets definiert wurde.
   Procedure OkButtonEvent(EventType)
@@ -207,8 +207,8 @@
     Debug "TrainCalendar event"
   EndProcedure
   
-  ; Die übliche Haupt-Ereignisschleife, die einzige Änderung ist der automatische Aufruf der
-  ; für jedes Fenster generierten Ereignis-Prozedur.
+  ; Die Ã¼bliche Haupt-Ereignisschleife, die einzige Ã„nderung ist der automatische Aufruf der
+  ; fÃ¼r jedes Fenster generierten Ereignis-Prozedur.
   Repeat
     Event = WaitWindowEvent()
     
@@ -225,7 +225,7 @@
 @EndCode
 
   Wie man sieht, ist es einfach, visuell entworfene Formulare in ein Programm zu integrieren.
-  In der Tat ist es auch weiterhin möglich, Fenster manuell zu erstellen, oder beides zu mischen.
-  Um die komplette Kontrolle über den generierten Code zu haben, wechseln Sie einfach die
-  Ansicht in den Code-Modus und überprüfen diesen.
+  In der Tat ist es auch weiterhin mÃ¶glich, Fenster manuell zu erstellen, oder beides zu mischen.
+  Um die komplette Kontrolle Ã¼ber den generierten Code zu haben, wechseln Sie einfach die
+  Ansicht in den Code-Modus und Ã¼berprÃ¼fen diesen.
 @LineBreak

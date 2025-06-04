@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Screen library documentation
 ;
-;      (c) 2023 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Screen
@@ -458,7 +458,8 @@ respectively leverage OpenGL and DirectX11 to handle screen creation.
 @Remarks
   On Linux and OS X, ScreenOutput() copies the whole screen buffer back to main memory to do 2D drawing operations 
   (OpenGL doesn't allow direct buffer access). Therefore drawing on a screen is very slow and should be avoided.
-  ScreenOutput() has to be called in the same thread where @@OpenScreen was called.
+  ScreenOutput() has to be called in the same thread where @@OpenScreen was called.@Linebreak
+  The use of @@InitEngine3D is forbidden, @@ScreenOutput returns 0.
 
 @Example
 @Code

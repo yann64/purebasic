@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Http library documentation
 ;
 ;      (c) Fantaisie Software
@@ -183,7 +183,7 @@
 
 ;--------------------------------------------------------------------------------------------------------
 
-@Function Result = HTTPInfo(HttpRequest, Type [, Flags])
+@Function Result$ = HTTPInfo(HttpRequest, Type [, Flags])
 
 @Description
   Returns information about an HTTP request created with @@HTTPRequest or

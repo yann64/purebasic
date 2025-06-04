@@ -1,4 +1,4 @@
-@Title General Syntax Rules
+ï»¿@Title General Syntax Rules
 
 
 PureBasic has established rules which never change. These are:
@@ -119,7 +119,7 @@ PureBasic has established rules which never change. These are:
 @Section Labels
 
   All labels must be followed by a colon @Keyword ":" character.
-  Label names may not contain any operators (+,-,...) or special characters (ß,ä,ö,ü,...).
+  Label names may not contain any operators (+,-,...) or special characters (ÃŸ,Ã¤,Ã¶,Ã¼,...).
   Labels defined inside a @ReferenceLink "procedures" "procedure" will be available only in that procedure.
 
   @Example

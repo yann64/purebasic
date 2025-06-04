@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Joint library documentation
 ;
 ;      (c) 2012 - Fantaisie Software

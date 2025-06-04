@@ -1,7 +1,7 @@
-;
+﻿;
 ;     String library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library String
@@ -412,6 +412,9 @@
   Debug Len("This is Art") ; will display 11
 @EndCode
 
+@SeeAlso
+  @@StringByteLength
+
 @SupportedOS
 
 ;--------------------------------------------------------------------------------------------------------
@@ -719,7 +722,6 @@
   @#PB_UTF8   : UTF8 format
   @#PB_Unicode: Unicode format
 @EndFixedFont
-  If omitted, the mode of the executable (@ReferenceLink "unicode" "unicode" or ascii) is used.
 
 @ReturnValue
   The number of bytes required to store the string in memory in a given format.
@@ -732,6 +734,9 @@
 @Code
   Debug StringByteLength("ä", #PB_UTF8) ; will display 2
 @EndCode
+
+@SeeAlso
+  @@Len
 
 @SupportedOS
 
@@ -1129,8 +1134,8 @@
 @Function *Buffer = Ascii(String$)
 
 @Description
-  Creates an Ascii representation of the string. When no more needed, the buffer needs to be freed
-  with @@FreeMemory.
+  Creates an Ascii representation of the string.  When the buffer is no longer needed, the buffer needs 
+  to be freed with FreeMemory().
 
 @Parameter "String$"
   The string to convert.
@@ -1153,7 +1158,7 @@
 @EndCode
 
 @SeeAlso
-  @@UTF8
+  @@UTF8, @@FreeMemory, @@MemorySize
 
 @SupportedOS
 
@@ -1162,8 +1167,8 @@
 @Function *Buffer = UTF8(String$)
 
 @Description
-  Creates a buffer with an UTF8 representation of the string. When no more needed, the buffer needs to be freed
-  with @@FreeMemory.
+  Creates a buffer with an UTF8 representation of the string.  When the buffer is no longer needed, 
+  the buffer needs to be freed with FreeMemory().
 
 @Parameter "String$"
   The string to convert.
@@ -1204,7 +1209,7 @@
 @EndCode
 
 @SeeAlso
-  @@Ascii
+  @@Ascii, @@FreeMemory, @@MemorySize
 
 @SupportedOS
 

@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Font library documentation
 ;
 ;      (c) 2023 - Fantaisie Software
@@ -157,6 +157,10 @@
   based upon such criteria as: the font name, the font height, the style and
   so forth. Therefore, the assumption can not be made that a font will not be
   loaded, due only to an incorrect font name, size, etc.
+@LineBreak
+@LineBreak
+  On Windows and macOS, you can change the size and style of the application's 
+  system font without specifying its name like this: LoadFont(1, "", 24)
 
 @Example
 @Code

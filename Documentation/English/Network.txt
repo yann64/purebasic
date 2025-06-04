@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Network library documentation
 ;
 ;      (c) 2025 - Fantaisie Software

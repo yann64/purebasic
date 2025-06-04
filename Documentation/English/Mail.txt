@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Mail library documentation
 ;
 ;      (c) Fantaisie Software

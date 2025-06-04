@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Runtime library documentation
 ;
-;      (c) 2013 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Runtime
@@ -27,7 +27,7 @@
 @Parameter "Object$"
   Name of the object to get the value from. The following objects are supported: @LineBreak
 - Variable: the object name is 'VariableName' (case insensitive). @LineBreak
-- Constant: the object name is '#Constantame' (case insensitive). @LineBreak
+- Constant: the object name is '#ConstantName' (case insensitive). @LineBreak
 - Procedure: the object name is 'ProcedureName()' (case insensitive). @LineBreak
   @LineBreak
   When accessing public @ReferenceLink "module" "module" items, the module prefix name is mandatory, even if @Keyword UseModule is used.
@@ -53,7 +53,7 @@
 @Parameter "Object$"
   Name of the object to get the value from. The following objects are supported: @LineBreak
 - Variable: the object name is 'VariableName' (case insensitive). @LineBreak
-- Constant: the object name is '#Constantame' (case insensitive). @LineBreak
+- Constant: the object name is '#ConstantName' (case insensitive). @LineBreak
   @LineBreak
   When accessing public @ReferenceLink "module" "module" items, the module prefix name is mandatory, even if @Keyword UseModule is used.
 
@@ -77,7 +77,7 @@
 @Parameter "Object$"
   Name of the object to get the value from. The following objects are supported: @LineBreak
 - Variable: the object name is 'VariableName' (case insensitive). @LineBreak
-- Constant: the object name is '#Constantame' (case insensitive). @LineBreak
+- Constant: the object name is '#ConstantName' (case insensitive). @LineBreak
   @LineBreak
   When accessing public @ReferenceLink "module" "module" items, the module prefix name is mandatory, even if @Keyword UseModule is used. 
 
@@ -100,7 +100,7 @@
 @Parameter "Object$"
   Name of the object to check. The following objects are supported: @LineBreak
 - Variable: the object name is 'VariableName' (case insensitive). @LineBreak
-- Constant: the object name is '#Constantame' (case insensitive). @LineBreak
+- Constant: the object name is '#ConstantName' (case insensitive). @LineBreak
 - Procedure: the object name is 'ProcedureName()' (case insensitive). @LineBreak
   @LineBreak
   When accessing public @ReferenceLink "module" "module" items, the module prefix name is mandatory, even if @Keyword UseModule is used.
@@ -175,6 +175,6 @@
 @NoReturnValue
 
 @SeeAlso
-  @@GetRuntimeInteger, @@IsRuntime
+  @@GetRuntimeString, @@IsRuntime
 
 @SupportedOS

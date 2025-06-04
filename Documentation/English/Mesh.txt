@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Mesh library documentation
 ;
 ;      (c) 2020 - Fantaisie Software
@@ -909,6 +909,9 @@
   Returns nonzero if the mesh was created successfully and zero if there was an error.
   If @#PB_Any was used as the #Mesh parameter then the new generated number is returned on success.
 
+@Remarks
+  The total number of vertices is limited by the product "TileCountX" x "TileCountZ" which must not exceed 65100.
+
 @Example
 @Code
   InitEngine3D()
@@ -937,6 +940,41 @@
 
 @SeeAlso
   @@FreeMesh, @@CreateSphere, @@CreateMesh, @@CreateCube, @@CreatePlane, @@CreateLine3D
+
+@SupportedOS
+
+;--------------------------------------------------------------------------------------------------------
+
+@Function MeshDirectAdd(#Mesh, MeshVertexArray(), MeshFaceArray(), Type, MaterialID)
+
+@Description
+  Add a new submesh to the specified #Mesh. A mesh can have any number of
+  submeshes. A submesh position is relative to the mesh position. 
+
+@Parameter "MeshVertexArray()"
+  The array containing the submesh vertex data. It has to be an array of type "MeshVertex".
+
+@Parameter "MeshFaceArray()"
+  The array containing the submesh face data. It has to be an array of type "MeshFace". 
+
+@Parameter "Type"
+  The type of the new submesh. It can be one of the following value:
+@FixedFont
+  @#PB_Mesh_TriangleList : the submesh will be composed of a list of triangles (default).
+  @#PB_Mesh_TriangleStrip: the submesh will be composed of a list of connected triangles (vertices are shared).
+  @#PB_Mesh_TriangleFan  : the submesh will be composed of a list of triangles sharing the same central vertex point.
+  @#PB_Mesh_PointList    : the submesh will be composed of a list of points.
+  @#PB_Mesh_LineList     : the submesh will be composed of a list of lines.
+  @#PB_Mesh_LineStrip    : the submesh will be composed of a list of connected lines (vertices are shared).
+@EndFixedFont
+
+@Parameter "MaterialID"
+  The default material to use for the submesh. To get a valid 'MaterialID', use @@MaterialID.
+
+@NoReturnValue
+
+@SeeAlso
+  @@FreeMesh, @@CreateMesh, @@LoadMesh
 
 @SupportedOS
 

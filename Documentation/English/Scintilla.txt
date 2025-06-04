@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Scintilla library documentation
 ;
-;      (c) 2023 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Scintilla
@@ -116,7 +116,7 @@
     ; Adding a second line of text with linebreak before
     Text$ = Chr(10) + "Second line"
     *Text=UTF8(Text$)
-    ScintillaSendMessage(0, #SCI_APPENDTEXT, Len(Text$), *Text)
+    ScintillaSendMessage(0, #SCI_APPENDTEXT, StringByteLength(Text$, #PB_UTF8), *Text)
     FreeMemory(*Text)
     
     Repeat : Until WaitWindowEvent() = #PB_Event_CloseWindow

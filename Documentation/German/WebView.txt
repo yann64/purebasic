@@ -1,4 +1,4 @@
-;
+﻿;
 ;     WebView library documentation
 ;
 ;      (c) 2025 - Fantaisie Software
@@ -38,7 +38,7 @@
 
 @Description
   Erstellt ein neues Webview-Gadget in der aktuellen Gadget-Liste.
-  Bei Bedarf kann mit @@WebWiewProxy ein Proxy eingerichtet werden.
+  Bei Bedarf kann mit @@WebViewProxy ein Proxy eingerichtet werden.
 
 @Parameter "#Gadget"
   Eine Nummer zur Identifizierung des neuen Gadgets. @ReferenceLink "purebasic_objects" "#PB_Any"
@@ -75,7 +75,8 @@
 @LineBreak
 @LineBreak
   - @@SetGadgetItemText: Mit @#PB_WebView_HtmlCode als 'Eintrag' kann HTML-Code in das Gadget
-  gestreamt werden.
+  gestreamt werden. Das HTML wird als nicht vertrauenswürdiger lokaler Inhalt behandelt und
+  einige Berechtigungen sind nicht zulässig.
 @LineBreak
 
 @Example mit lokalen HTML- und CSS-Dateien
@@ -174,7 +175,7 @@
   Until Event = #PB_Event_CloseWindow
 @EndCode
 
-@SeeAlso @@WebViewExecuteScript, @@BindWebViewCallback, @@WebWiewProxy
+@SeeAlso @@WebViewExecuteScript, @@BindWebViewCallback, @@WebViewProxy
 
 @SupportedOS
 
@@ -213,6 +214,10 @@
 
 @NoReturnValue
 
+@Remarks
+   Wenn Ihre JavaScript-Callback-Funktion ein @@UTF8 generiertes Ergebnis anstelle von 0 zurückgibt, wird PureBasic
+   den zur Rückgabe verwendeten Speicher automatisch freigeben, wenn er nicht mehr benötigt wird.
+   
 @Example mit einer 2-Parameter-Javascript-Funktion
 @Code
   ; Eine einfache Schaltfläche, deren Beschriftung sich je nach Ergebnis des PureBasic-Rückrufs ändert
@@ -257,7 +262,8 @@
   Until Event = #PB_Event_CloseWindow
 @EndCode
 
-@SeeAlso @@WebViewGadget, @@UnbindWebViewCallback
+@SeeAlso
+  @@WebViewGadget, @@UnbindWebViewCallback
 
 @SupportedOS
 
@@ -332,7 +338,7 @@
 
 ;--------------------------------------------------------------------------------------------------------
 
-@Function WebWiewProxy(URL$, Port [Benutzername$, Passwort$])
+@Function WebViewProxy(URL$, Port [Benutzername$, Passwort$])
 
 @Description
   Richtet einen Proxy für alle künftig erstellten @@WebViewGadget ein. Das bedeutet, dass alle externen

@@ -1,4 +1,4 @@
-@Title Introduction
+﻿@Title Introduction
 
   PureBasic is an "high-level" programming language based on established "BASIC" rules. 
   It is mostly compatible with any other "BASIC" compiler. 

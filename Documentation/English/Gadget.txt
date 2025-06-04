@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Gadget library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Gadget
@@ -3988,10 +3988,8 @@
   EndIf
 @EndCode
   
-
-
 @SeeAlso
-  @@GadgetX, @@GadgetY, @@GadgetWidth, @@GadgetHeight
+  @@GadgetX, @@GadgetY, @@GadgetWidth, @@GadgetHeight, @@ResizeWindow, @@BindEvent
 
 @SupportedOS
 
@@ -4010,7 +4008,7 @@
   The position and dimensions of the new gadget.
 
 @Parameter "Minimum, Maximum"
-  The range of values that the scrollbar can take. These values should be between 0 and 10,000 to avoid
+  The range of values that the scrollbar can take. These values must be between 0 and 10,000 to avoid
   limitations on some operating systems.
 
 @Parameter "PageLength"

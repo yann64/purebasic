@@ -1,4 +1,4 @@
-@Title Migration from PureBasic 5.20 LTS to 5.40 LTS
+﻿@Title Migration from PureBasic 5.20 LTS to 5.40 LTS
 
 @Section Billboard library
 

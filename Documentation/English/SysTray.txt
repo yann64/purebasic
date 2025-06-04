@@ -1,13 +1,13 @@
-;
+﻿;
 ;     SysTray library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library SysTray
 
 @Overview
-  The SysTray (also called the the system tray) is the right part of the taskbar which contains some icons and
+  The SysTray (also called the system tray) is the right part of the taskbar which contains some icons and
   the date/hour. PureBasic provides full access to this area and the capability to
   add any number of icons to it. @LineBreak
   @LineBreak
@@ -37,7 +37,7 @@
   @ReferenceLink "purebasic_objects" "#PB_Any" can be used to auto-generate this number.
 
 @Parameter "WindowID"
-  The window on which The SysTray events will be handled. @@WindowID can be used to get this value.
+  The window on which the SysTray events will be handled. @@WindowID can be used to get this value.
 
 @Parameter "ImageID"
   The image to use for the SysTray icon. It is advised to use a PNG image in order to have a 
@@ -47,8 +47,9 @@
   Nonzero if the SysTray icon has been successfully added, zero otherwise.
 
 @Remarks
-  All SysTray icons are automatically removed when the program ends.
-
+  All SysTray icons are automatically removed when the program ends. @LineBreak
+  With the QT subsystem, the left-click returns a double-left-click event and the middle-click returns a left-click event. @LineBreak
+  For normal operation, a systray event must always be associated with a @LibraryLink "menu" "menu".
 @Example
 @Code
   ; Invisible window to just have the systray

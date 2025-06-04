@@ -1,4 +1,4 @@
-@Title UserGuide - Compiler directives (for different behavior on different OS)
+ï»¿@Title UserGuide - Compiler directives (for different behavior on different OS)
 
 This will be our last visit to the File Properties program. There is one limitation
 discussed previously to overcome and we've left it until now because it is a special case.
@@ -31,40 +31,40 @@ Add this new procedure to the implementation section.
     Result = ""
     
     CompilerIf #PB_Compiler_OS = #PB_OS_Windows
-          
-          ; These are the attributes for Windows systems.
-          ; A logical-and of the attribute with each constant filters out that bit and can then be used for comparison.
+      Â  Â  
+      Â  Â  ; These are the attributes for Windows systems.
+      Â  Â  ; A logical-and of the attribute with each constant filters out that bit and can then be used for comparison.
       
-          If Attributes & #PB_FileSystem_Archive
-              Result + "A"
-          Else
-              Result + " "
-          EndIf
-          
-          If Attributes & #PB_FileSystem_Compressed
-              Result + "C"
-          Else
-              Result + " "
-          EndIf
-          
-          If Attributes & #PB_FileSystem_Hidden
-              Result + "H"
-          Else
-              Result + " "
-          EndIf
-          
-          If Attributes & #PB_FileSystem_ReadOnly
-              Result + "R"
-          Else
-              Result + " "
-          EndIf
-          
-          If Attributes & #PB_FileSystem_System
-              Result + "S"
-          Else
-              Result + " "
-          EndIf
-          
+      Â  Â  If Attributes & #PB_FileSystem_Archive
+        Â  Â  Â  Result + "A"
+      Â  Â  Else
+        Â  Â  Â  Result + " "
+      Â  Â  EndIf
+      Â  Â  
+      Â  Â  If Attributes & #PB_FileSystem_Compressed
+        Â  Â  Â  Result + "C"
+      Â  Â  Else
+        Â  Â  Â  Result + " "
+      Â  Â  EndIf
+      Â  Â  
+      Â  Â  If Attributes & #PB_FileSystem_Hidden
+        Â  Â  Â  Result + "H"
+      Â  Â  Else
+        Â  Â  Â  Result + " "
+      Â  Â  EndIf
+      Â  Â  
+      Â  Â  If Attributes & #PB_FileSystem_ReadOnly
+        Â  Â  Â  Result + "R"
+      Â  Â  Else
+        Â  Â  Â  Result + " "
+      Â  Â  EndIf
+      Â  Â  
+      Â  Â  If Attributes & #PB_FileSystem_System
+        Â  Â  Â  Result + "S"
+      Â  Â  Else
+        Â  Â  Â  Result + " "
+      Â  Â  EndIf
+      Â  Â  
     CompilerElse
       
       ; These are the attributes for Mac and Linux systems.
@@ -72,7 +72,7 @@ Add this new procedure to the implementation section.
       If Attributes & #PB_FileSystem_Link
         Result + "L "
       Else
-        Result + "  "
+        Result + "Â  "
       EndIf
       
       ; User attributes.
@@ -91,7 +91,7 @@ Add this new procedure to the implementation section.
       If Attributes & #PB_FileSystem_ExecUser
         Result + "X "
       Else
-        Result + "  "
+        Result + "Â  "
       EndIf
       
       ; Group attributes.
@@ -110,7 +110,7 @@ Add this new procedure to the implementation section.
       If Attributes & #PB_FileSystem_ExecGroup
         Result + "X "
       Else
-        Result + "  "
+        Result + "Â  "
       EndIf
       
       ; All attributes.

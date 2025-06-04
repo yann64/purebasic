@@ -1,4 +1,16 @@
-@Title History
+ï»¿@Title History
+
+@Section xxth May 2025 : Version 6.21
+
+- @Green "Added": #PB_Sprite_Transparent support to CreateSprite() @LineBreak
+- @Green "Added": #PB_Image_BlackAlphaBackground and #PB_Image_WhiteAlphaBackground for SaveImage() @LineBreak
+- @Green "Added": LoadImage() now supports 32-bit BMP files when alpha channel is found @LineBreak
+- @Green "Added": OSVersion() now support  Windows Server 2016, Windows Server 2019, Windows Server 2022 and Windows Server 2025 @LineBreak
+@LineBreak
+- @Red "Removed": #PB_Menu_ModernLook and #PB_Menu_SysTrayLook support on Windows. @LineBreak
+@LineBreak
+- @Blue "Fixed": A few compiler and libraries bugs @LineBreak @LineBreak
+- @Blue "Fixed": Two IDE issues, thanks to kenmo ! @LineBreak
 
 @Section 12th February 2025 : Version 6.20
 
@@ -6,7 +18,7 @@
 - @Green "Added": Windows 11 native arm64 support ! @LineBreak
 - @Green "Added": TLS support for Network library (Thanks Idle for the tips) ! @LineBreak
 - @Green "Added": PureLibrary creation in PureBasic ! @LineBreak
-- @Green "Added": WebWiewProxy() to enable proxy support (Sponsored by Kukulkan) @LineBreak
+- @Green "Added": WebViewProxy() to enable proxy support (Sponsored by Kukulkan) @LineBreak
 - @Green "Added": #PB_Editor_TabNavigation support to EditorGadget() (Sponsored by Quin) @LineBreak
 - @Green "Added": #PB_Entity_InheritScale support to Get/SetEntityAttribute() @LineBreak
 - @Green "Added": DLL support to UsePostgreSQL() (Sponsored by wayne-c) @LineBreak
@@ -66,7 +78,7 @@
 - @Green "Added": ConvertDate(Date, #PB_Date_LocalTime/#PB_Date_UTC) to convert the date between UTC and localtime @LineBreak
 - @Green "Added": ScaleEntityBone(), MeshDirectAdd() and #PB_Mesh_Direct mode support to CreateMesh() @LineBreak
 - @Green "Added": AddPackDirectory(#Packer, PackedDirectoryName$) for empty directory @LineBreak
-- @Green "Added": UseDialogWebGadget(), UseDialogOpenGLGadget(), UseDialogScintillaGadget() to avoid big lib dependency by default when using dialogs. @LineBreak
+- @Green "Added": UseDialogWebGadget(), UseDialogWebViewGadget(), UseDialogOpenGLGadget(), UseDialogScintillaGadget() to avoid big lib dependency by default when using dialogs. @LineBreak
 - @Green "Added": NbMaxChannels parameter for InitSound(). Range from 1 to 254. @LineBreak
 - @Green "Added": 'Encoding' optional parameter to OpenPreference() to handle properly UTF-8 files without BOM @LineBreak
 - @Green "Added": Parent window support to all requesters @LineBreak
@@ -1322,7 +1334,7 @@ created using the '/IMPORT' switch of the pbcompiler. @LineBreak
 - @Blue "Fixed": OGG Plug-in wasn't working anymore and sometimes songs were cut. It's also faster to decode. @LineBreak
 - @Blue "Fixed": ResizeImage() doesn't change the image anymore if the same dimensions are used. @LineBreak
 - @Blue "Fixed": TAB in an EditorGadget() doesn't give the focus to others gadgets anymore but insert a Tab @LineBreak
-- @Blue "Fixed": LCase() didn't handled the 'ß' german character correctly @LineBreak
+- @Blue "Fixed": LCase() didn't handled the 'ÃŸ' german character correctly @LineBreak
 - @Blue "Fixed": SetGadgetState() wasn't working correctly for OptionGadget() @LineBreak
 - @Blue "Fixed": Debugger's code listing window dimensions are now saved like other windows @LineBreak
 - @Blue "Fixed": EditorGadget() while using AddGadgetItem() with blank strings and -1 position @LineBreak
@@ -2143,7 +2155,7 @@ created using the '/IMPORT' switch of the pbcompiler. @LineBreak
     via the source code with the following commands: CallDebugger, EnableDebugger, DisableDebugger @LineBreak
 - @Green "Added": new commands: ListViewGadget(), AddListViewItem(), GetGadgetText(), SetGadgetText(), PeekS(), SizeOf() @LineBreak
 - @Green "Added": Multi-language to the editor (French, German, English) @LineBreak
-- @Green "Added": Microsoft Windows © resident file containing all the constants and structures needed for easy OS
+- @Green "Added": Microsoft Windows Â© resident file containing all the constants and structures needed for easy OS
     programming under PureBasic. @LineBreak
  @LineBreak
   - @constantcolor Improved the editor a lot: contextual help (F1 on a keyword), Goto, Compiler Options, much better

@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Sprite library documentation
 ;
 ;      (c) 2023 - Fantaisie Software
@@ -178,7 +178,7 @@ respectively leverage OpenGL and DirectX11 to handle screen creation.
 @FixedFont
   @#PB_Sprite_PixelCollision: Add special information to handle pixel collision through @@SpritePixelCollision.
   @#PB_Sprite_AlphaBlending : Sprite is created with per pixel alpha-channel support, needed for @@DisplayTransparentSprite.
-  @#PB_Sprite_Transparent : Sprite is created fully transparent (alpha channel value set to 0). If used, @@DrawingMode should be set to @PB_DrawingMode_AllChannels when using @@SpriteOutput.
+  @#PB_Sprite_Transparent : Sprite is created fully transparent (alpha channel value set to 0). If used, @@DrawingMode should be set to @#PB_DrawingMode_AllChannels when using @@SpriteOutput.
 @EndFixedFont
 
 @ReturnValue
@@ -224,7 +224,7 @@ respectively leverage OpenGL and DirectX11 to handle screen creation.
 @EndCode
 
 @SeeAlso
-  @@SpriteOutput
+  @@GrabSprite, @@SpriteOutput
 
 @SupportedOS
 
@@ -304,7 +304,7 @@ respectively leverage OpenGL and DirectX11 to handle screen creation.
 @Function Result = GrabSprite(#Sprite, x, y, Width, Height [, Flags])
 
 @Description
-  Grabs the screen content from the area x,y,Width,Height and creates a new sprite.
+  Grabs the screen content from the area x, y, Width, Height and creates a new sprite.
 
 @Parameter "#Sprite"
   A number to identify the new grabbed sprite. @ReferenceLink "purebasic_objects" "#PB_Any" can
@@ -329,7 +329,8 @@ respectively leverage OpenGL and DirectX11 to handle screen creation.
   for the #Sprite parameter then the generated number is returned on success.
 
 @Remarks
-  GrabSprite() should be always called outside a @@StartDrawing : @@StopDrawing block.
+  GrabSprite() should be always called outside a @@StartDrawing : @@StopDrawing block.@Linebreak
+  The transparent sprite color is automatically applied when using AlphaBlending flag.
   
 @SupportedOS
 

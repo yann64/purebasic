@@ -1,4 +1,4 @@
-;
+﻿;
 ;     File library documentation
 ;
 ;      (c) 2024 - Fantaisie Software

@@ -1,4 +1,4 @@
-;
+﻿;
 ;     Entity library documentation
 ;
 ;      (c) 2022 - Fantaisie Software
@@ -648,6 +648,8 @@ saving CPU clocks.
   - Light  : use @@LightID as 'ObjectID'.
   - BillboardGroup : use @@BillboardGroupID as 'ObjectID'.
   - ParticleEmitter: use @@ParticleEmitterID as 'ObjectID'.
+  - Node   : use @@NodeID as 'ObjectID'.
+  - Text3D : use @@Text3DID as 'ObjetID'.  
 @EndFixedFont
 
 @OptionalParameter "x, y, z"

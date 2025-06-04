@@ -1,4 +1,4 @@
-@Title Compiling your programs
+﻿@Title Compiling your programs
 
   Compiling is simple. Just select "Compile/Run" (F5 by default) and your program will be
   compiled and executed for a testing run.

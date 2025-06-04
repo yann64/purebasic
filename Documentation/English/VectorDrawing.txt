@@ -1,4 +1,4 @@
-;
+﻿;
 ;     VectorDrawing library documentation
 ;
 ;      (c) 2015 - Fantaisie Software
@@ -2443,7 +2443,8 @@
   region can be saved and restored using the @@SaveVectorState and @@RestoreVectorState functions
   respectively. So in order to apply temporary clipping to the drawing output, first save the
   drawing state and later restore it to go back to the original clipping regions.
-
+  On Windows, the result will be pixelated on the edges, without antialiasing, which is a limitation of GDI+.
+  
 @Example 
 
 @Code

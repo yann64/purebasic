@@ -1,12 +1,12 @@
-@Title Contacts
+ï»¿@Title Contacts
 
   Veuillez envoyer vos suggestions, rapports de bugs, ou si vous voulez simplement nous contacter 
-  à une des adresses suivantes:
+  Ã  une des adresses suivantes:
 
-@Section Frédéric 'AlphaSND' Laboureur
+@Section FrÃ©dÃ©ric 'AlphaSND' Laboureur
 
   Fred 'AlphaSND' est le fondateur de Fantaisie Software et le programmeur principal de PureBasic. 
-  Toutes les suggestions, rapports de bugs etc... lui seront adressés à:
+  Toutes les suggestions, rapports de bugs etc... lui seront adressÃ©s Ã :
 
   @Indent @Section
 
@@ -24,9 +24,9 @@
   @EndIndent @Section
     
 
-@Section André Beer
+@Section AndrÃ© Beer
 
-  André se charge de la traduction et du support allemand de PureBasic (manuel et site web). @LineBreak
+  AndrÃ© se charge de la traduction et du support allemand de PureBasic (manuel et site web). @LineBreak
   @LineBreak
   e-mail: @InternetLink "mailto:andre@purebasic.com" "andre@purebasic.com"
 

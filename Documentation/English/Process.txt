@@ -1,7 +1,7 @@
-;
+﻿;
 ;     Process library documentation
 ;
-;      (c) 2024 - Fantaisie Software
+;      (c) 2025 - Fantaisie Software
 ;
 
 @Library Process
@@ -314,6 +314,9 @@
   that loaded it.
 @EndOS
 
+@SeeAlso
+  @@GetPathPart, @@GetFilePart
+
 @SupportedOS
 
 ;--------------------------------------------------------------------------------------------------------
@@ -399,6 +402,9 @@
     Repeat : Until WaitWindowEvent() = #PB_Event_CloseWindow
   EndIf
 @EndCode
+
+@SeeAlso
+  @@CreatePreferences
 
 @SupportedOS
 

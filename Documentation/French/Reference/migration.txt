@@ -1,29 +1,29 @@
-@Title Guide de migration 
+ï»¿@Title Guide de migration 
 
 @Section Introduction
   PureBasic est un langage de programmation 
-  moderne qui évolue rapidement. Il suit 
+  moderne qui Ã©volue rapidement. Il suit 
   les changements technologiques et apporte 
-  une mise à jour de son jeu de fonction, pour 
+  une mise Ã  jour de son jeu de fonction, pour 
   le programmeur. Cela implique parfois de 
-  modifier ou de réécrire une partie du language. 
+  modifier ou de rÃ©Ã©crire une partie du language. 
   Alors nous essayons de faire ces modifications 
-  à minima et ce guide de migration aidera 
-  à mettre à jour vos codes sources d'une 
+  Ã  minima et ce guide de migration aidera 
+  Ã  mettre Ã  jour vos codes sources d'une 
   version vers une autre.
   @LineBreak
   @LineBreak
-  Si la stabilité est prioritaire sur les 
-  nouveautés, nous vous recommandons fortement 
+  Si la stabilitÃ© est prioritaire sur les 
+  nouveautÃ©s, nous vous recommandons fortement 
   de garder la version 'LTS' (Long Term 
-  Support/Support à Long Terme) de PureBasic, 
-  qui est présentée au public tous les 2 
+  Support/Support Ã  Long Terme) de PureBasic, 
+  qui est prÃ©sentÃ©e au public tous les 2 
   ans, et dont la maintenance active permet la 
-  corrections des bugs périodiquement.
+  corrections des bugs pÃ©riodiquement.
   @LineBreak
   @LineBreak
 
-@Section Dernière version
+@Section DerniÃ¨re version
 
   @ReferenceLink "migration_550_560" "migration de 5.50 vers 5.60" @LineBreak
   @ReferenceLink "migration_540_550" "migration de 5.40 vers 5.50" @LineBreak
