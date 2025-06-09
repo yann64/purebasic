@@ -86,7 +86,7 @@
   Hier die vollständige Liste aller Bibliotheken, die PureBasic anbietet:
 @LineBreak
 @LineBreak
-@Code
+@FixedFont
   Windows & System:
     Array
     Cgi
@@ -178,4 +178,4 @@
     Vehicle
     Vertexanimation
     Window3d
-@EndCode
+@EndFixedFont

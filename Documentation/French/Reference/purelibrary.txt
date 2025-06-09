@@ -97,7 +97,7 @@
   DisablePureLibrary MaLibSuperCool
 
   ; Toutes les fonctions trouvées dans "MaLibSuperCool" seront ignorées, afin que 
-  leur nom puisse être réutilisé avec ProcedureDLL
+  ; leur nom puisse être réutilisé avec ProcedureDLL
 @EndCode
 
 @Section Suppression d'une PureLibrary

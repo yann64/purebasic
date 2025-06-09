@@ -91,7 +91,7 @@
 @LineBreak
   Voici la liste exhaustives de toutes les bibliothèques que propose PureBasic:@LineBreak
 @LineBreak
-@Code
+@FixedFont
   Fenêtres & systèmes :
     arrays
     cgi
@@ -183,4 +183,4 @@
     vehicle
     vertexanimation
     window3d
-@EndCode
+@EndFixedFont
