@@ -1,6 +1,6 @@
 ﻿@Title Historique
 
-@Section xx mai 2025 : Version 6.21
+@Section 9 juin 2025 : Version 6.21
 
 - @Green "Ajouté" : Prise en charge de @#PB_Sprite_Transparent pour @@CreateSprite @LineBreak
 - @Green "Ajouté" : @#PB_Image_BlackAlphaBackground et @#PB_Image_WhiteAlphaBackground pour @@SaveImage @LineBreak
