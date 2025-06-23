@@ -1287,23 +1287,15 @@
   The type of the JSON value or its content can be modified with one of the following
   functions:
 @LineBreak
-  - @@SetJSONArray: Change the value to an (empty) array
-@LineBreak
-  - @@SetJSONBoolean: Change the value to a boolean
-@LineBreak
-  - @@SetJSONDouble: Change the value to a number
-@LineBreak
-  - @@SetJSONFloat: Change the value to a number
-@LineBreak
-  - @@SetJSONInteger: Change the value to a number
-@LineBreak
-  - @@SetJSONNull: Change the value to a 'null'
-@LineBreak
-  - @@SetJSONObject: Change the value to an (empty) object
-@LineBreak
-  - @@SetJSONString: Change the value to a string
-@LineBreak
-  - @@SetJSONQuad: Change the value to a number
+  @@SetJSONArray: Change the value to an (empty) array @LineBreak
+  @@SetJSONBoolean: Change the value to a boolean @LineBreak
+  @@SetJSONDouble: Change the value to a number @LineBreak
+  @@SetJSONFloat: Change the value to a number @LineBreak
+  @@SetJSONInteger: Change the value to a number @LineBreak
+  @@SetJSONNull: Change the value to a 'null' @LineBreak
+  @@SetJSONObject: Change the value to an (empty) object @LineBreak
+  @@SetJSONString: Change the value to a string @LineBreak
+  @@SetJSONQuad: Change the value to a number
 
 @Example
 @Code

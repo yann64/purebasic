@@ -117,7 +117,7 @@ Procedure.s CheckPureBasicKeyWords(CurrentWord$)
       Topic$ = "Reference/compilerdirectives"
       
       CompilerIf #SpiderBasic
-      Case "ENABLEJS", "DISABLEJS"
+      Case "ENABLEJS", "DISABLEJS", "ENDHEADERSECTION", "HEADERSECTION" 
         Topic$ = "Reference/compilerdirectives"
       CompilerElse
       Case "ENABLEASM", "DISABLEASM"

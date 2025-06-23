@@ -433,15 +433,15 @@
   type the event is. The following gadgets support EventType():
 @LineBreak
 @LineBreak
-  - @@CanvasGadget - The CanvasGadget has a special set of event types. @LineBreak
-  - @@ComboBoxGadget @LineBreak
-  - @@EditorGadget @LineBreak
-  - @@ImageGadget @LineBreak
-  - @@ListViewGadget @LineBreak
-  - @@ListIconGadget @LineBreak
-  - @@SpinGadget @LineBreak
-  - @@StringGadget @LineBreak
-  - @@WebGadget - The WebGadget has a special set of event types. @LineBreak
+  @@CanvasGadget - The CanvasGadget has a special set of event types. @LineBreak
+  @@ComboBoxGadget @LineBreak
+  @@EditorGadget @LineBreak
+  @@ImageGadget @LineBreak
+  @@ListViewGadget @LineBreak
+  @@ListIconGadget @LineBreak
+  @@SpinGadget @LineBreak
+  @@StringGadget @LineBreak
+  @@WebGadget - The WebGadget has a special set of event types. @LineBreak
 @LineBreak
  (See the gadget definition to see which events are supported.)  
 

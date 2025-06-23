@@ -984,3 +984,29 @@
   @@Str, @@StrU, @@StrF, @@StrD
 
 @SupportedOS
+
+;--------------------------------------------------------------------------------------------------------
+
+@Function Result = StringByteLength(String$)
+
+@Description
+  Returns the number of bytes required to store the string in memory as UTF-8.
+
+@Parameter "String$"
+  The string to use.
+
+@ReturnValue
+  The number of bytes required to store the string in memory as UTF-8.
+
+@Remarks
+  The number of bytes returned does not include the terminating Null-Character of the string.
+
+@Example
+@Code
+  Debug StringByteLength("ä", #PB_UTF8) ; will display 2
+@EndCode
+
+@SeeAlso
+  @@Len
+
+@SupportedOS

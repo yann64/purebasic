@@ -226,8 +226,14 @@ Procedure LoadPreferences()
   EnableFolding    = ReadPreferenceLong("EnableFolding",  1)
   
   ; default
-  NbFoldStartWords = 10
-  NbFoldEndWords = 7
+  
+  CompilerIf #SpiderBasic
+    NbFoldStartWords = 11
+    NbFoldEndWords = 8
+  CompilerElse
+    NbFoldStartWords = 10
+    NbFoldEndWords = 7
+  CompilerEndIf
   FoldStart$(1) = ";{"
   FoldStart$(2) = "Macro"
   FoldStart$(3) = "Procedure"
@@ -239,6 +245,7 @@ Procedure LoadPreferences()
   FoldStart$(9) = "CompilerIf"
   CompilerIf #SpiderBasic 
     FoldStart$(10) = "EnableJS" 
+    FoldStart$(11) = "HeaderSection" 
   CompilerElse 
     FoldStart$(10) = "EnableASM" 
   CompilerEndIf
@@ -251,6 +258,7 @@ Procedure LoadPreferences()
   FoldEnd$(6) = "CompilerEndIf"
   CompilerIf #SpiderBasic 
     FoldEnd$(7) = "DisableJS"
+    FoldEnd$(8) = "EndHeaderSection"
   CompilerElse 
     FoldEnd$(7) = "DisableASM"
   CompilerEndIf
@@ -330,7 +338,7 @@ Procedure LoadPreferences()
   EndIf
   
   If PrefsVersion < 520
-    ; CompilerElseIf added in 5.10
+    ; CompilerElseIf added in 5.20
     ReDim IndentKeywords.IndentEntry(NbIndentKeywords+4)
     
     IndentKeywords(NbIndentKeywords)\Keyword$ = "DeclareModule"
@@ -363,6 +371,22 @@ Procedure LoadPreferences()
     NbIndentKeywords+1
   EndIf
   
+  CompilerIf #SpiderBasic
+    If PrefsVersion < 621
+      ReDim IndentKeywords.IndentEntry(NbIndentKeywords+2)
+      
+      IndentKeywords(NbIndentKeywords)\Keyword$ = "HeaderSection"
+      IndentKeywords(NbIndentKeywords)\Before = 0
+      IndentKeywords(NbIndentKeywords)\After  = 1
+      NbIndentKeywords+1
+      
+      IndentKeywords(NbIndentKeywords)\Keyword$ = "EndHeaderSection"
+      IndentKeywords(NbIndentKeywords)\Before = -1
+      IndentKeywords(NbIndentKeywords)\After  = 0
+      NbIndentKeywords+1
+    EndIf
+  CompilerEndIf
+    
   ; Sort and index the values
   BuildIndentVT()
   
@@ -3264,7 +3288,7 @@ Procedure OpenPreferencesWindow()
     DisableGadget(#GADGET_Preferences_SharedUCRT, 1)
   CompilerEndIf
   
-   CompilerIf Not #CompileLinux
+   CompilerIf Not #CompileLinux And Not #SpiderBasic
     DisableGadget(#GADGET_Preferences_Wayland, 1)
   CompilerEndIf
   

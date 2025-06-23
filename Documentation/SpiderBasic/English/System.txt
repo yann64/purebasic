@@ -331,9 +331,9 @@ The system library offers access to specialized commands.
 @Parameter "State"
   It can be one of the following constant:
 @FixedFont 
-  - @#PB_SplashScreen_AutoClose  : The splashscreen will be automatically closed when the application has been launched (default).
-  - @#PB_SplashScreen_NoAutoClose: Disable the auto splashscreen closing. It will need to be manually closed with @#PB_SplashScreen_Close. 
-  - @#PB_SplashScreen_Close      : Force closing the splashscreen.
+  @#PB_SplashScreen_AutoClose  : The splashscreen will be automatically closed when the application has been launched (default).
+  @#PB_SplashScreen_NoAutoClose: Disable the auto splashscreen closing. It will need to be manually closed with @#PB_SplashScreen_Close. 
+  @#PB_SplashScreen_Close      : Force closing the splashscreen.
 @EndFixedFont
 
 @NoReturnValue

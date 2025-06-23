@@ -81,6 +81,9 @@ DataSection
   Data$ "EndDataSection"    , "", ""
   Data$ "EndDeclareModule"  , "", ""
   Data$ "EndEnumeration"    , "", ""
+  CompilerIf #SpiderBasic
+      Data$ "EndHeaderSection"        , "", ""
+  CompilerEndIf
   Data$ "EndIf"             , "", ""
   Data$ "EndImport"         , "", ""
   Data$ "EndInterface"      , "", ""
@@ -108,6 +111,10 @@ DataSection
   CompilerIf Not #SpiderBasic
     Data$ "Gosub" , "", " "
     Data$ "Goto"  , "", " "
+  CompilerEndIf
+  
+  CompilerIf #SpiderBasic
+    Data$ "HeaderSection"        , "EndHeaderSection", ""
   CompilerEndIf
 
   Data$ "If"            , "EndIf", " "

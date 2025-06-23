@@ -260,7 +260,7 @@ IncludeFile "../Common.pb"
 #PB_Notification_Secret   = (1 << 1)
 #PB_Notification_Progress = (1 << 2)
 
-#PB_Notification_At        = 0
+#PB_Notification_Now       = 0
 #PB_Notification_InSecond  = 1
 #PB_Notification_InMinute  = 2
 #PB_Notification_InHour    = 3
@@ -276,6 +276,7 @@ IncludeFile "../Common.pb"
 #PB_Notification_EveryWeek   = 13
 #PB_Notification_EveryMonth  = 14
 #PB_Notification_EveryYear   = 15
+#PB_Notification_At          = 16
 
 ; LoadScript()
 ;

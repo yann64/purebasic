@@ -1581,10 +1581,10 @@ Procedure ScanBuffer(*Parser.ParserData, *Buffer, Length, LineOffset, LastLine, 
           AddSourceItem(#ITEM_ProcedureEnd, Parser_CurrentLine, -1, -1)
           
         CompilerIf #SpiderBasic ; For now, PB doesn't have EnableC, and EnableASM doesn't need this as it doesn't conflict with PB synatx
-          Case #KEYWORD_EnableASM
+          Case #KEYWORD_EnableASM, #KEYWORD_HeaderSection
             AddSourceItem(#ITEM_InlineASM, Parser_CurrentLine, -1, -1)
             
-          Case #KEYWORD_DisableASM
+          Case #KEYWORD_DisableASM, #KEYWORD_EndHeaderSection
             AddSourceItem(#ITEM_InlineASMEnd, Parser_CurrentLine, -1, -1)
         CompilerEndIf
           
@@ -3833,7 +3833,9 @@ DataSection
   Data.l #KEYWORD_Select,          #KEYWORD_Case
   Data.l #KEYWORD_Select,          #KEYWORD_EndSelect
   Data.l #KEYWORD_Structure,       #KEYWORD_EndStructure
-  CompilerIf Not #SpiderBasic
+  CompilerIf #SpiderBasic
+    Data.l #KEYWORD_HeaderSection,  #KEYWORD_EndHeaderSection
+  CompilerElse
     Data.l #KEYWORD_StructureUnion,  #KEYWORD_EndStructureUnion
   CompilerEndIf
   Data.l #KEYWORD_While,           #KEYWORD_Wend
